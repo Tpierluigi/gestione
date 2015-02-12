@@ -1,0 +1,48 @@
+<?
+  $fNote=str_replace("'","''",$fNote);
+  $posizione=$db->escape($posizione);
+  
+  $campi[$i]=new stdClass();$campi[$i]->campo='Tipo';         $campi[$i]->valore=$Tipo;$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='descrizione';  $campi[$i]->valore="'$descrizione'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='posizione';    $campi[$i]->valore="'$posizione'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='SN';           $campi[$i]->valore="'$SN'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='COA';          $campi[$i]->valore="'$COA'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='IPaddress';    $campi[$i]->valore="'$IP'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='IDrete';       $campi[$i]->valore="'$NetID'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='VNCPWD';       $campi[$i]->valore="'$passwordVNC'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='AdminPWD';     $campi[$i]->valore="'$passwordAdmin'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='UserName';     $campi[$i]->valore="'$nomeutente'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='UserPWD';      $campi[$i]->valore="'$pwutente'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='commessa';     $campi[$i]->valore="'$commessa'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='marca';        $campi[$i]->valore="'$marca'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='marcamon';     $campi[$i]->valore="'$marcamon'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='modello';      $campi[$i]->valore="'$modello'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='modmon';       $campi[$i]->valore="'$modmon'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='pollici';      $campi[$i]->valore="'$pollici'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='tipomon';      $campi[$i]->valore="'$tipomon'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='madre';        $campi[$i]->valore="'$madre'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='CPU';          $campi[$i]->valore="'$CPU'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='RAM';          $campi[$i]->valore=(int)$RAM;$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='HD';           $campi[$i]->valore="'$HD'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='Note';         $campi[$i]->valore="'$fNote'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='NomeGruppo';   $campi[$i]->valore="'$GroupName'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='TipoGruppo';   $campi[$i]->valore="'$GroupType'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='gateway';      $campi[$i]->valore="'$GW1'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='gateway2';     $campi[$i]->valore="'$GW2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='skrete1';      $campi[$i]->valore="'$skrete1'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='skrete2';      $campi[$i]->valore="'$skrete2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='skvideo';      $campi[$i]->valore="'$skvideo'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='audio';        $campi[$i]->valore="'$audio'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='lettore1';     $campi[$i]->valore="'$lettore1'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='modlet1';      $campi[$i]->valore="'$modlet1'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='lettore2';     $campi[$i]->valore="'$lettore2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='modlet2';      $campi[$i]->valore="'$modlet2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='IPAddress2';   $campi[$i]->valore="'$IP2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='Netmask';      $campi[$i]->valore="'$NM'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='Netmask2';     $campi[$i]->valore="'$NM2'";$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='id_aziende';   $campi[$i]->valore=$id_aziende;$i++;
+  $campi[$i]=new stdClass(); $campi[$i]->campo='progressivoimpianto';$campi[$i]->valore=$progressivoimpianto;$i++;
+  $query=sqlUpdate('apparecchi',$campi,"ID=$id");
+  $db->query($query);
+  $successo=2;
+?>

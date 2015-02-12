@@ -1,0 +1,3 @@
+26/11/2004 Da sistemare  su Pc : doppi apici su campo modello PC
+10/12/2004 Da sistemare su PC: aggiunta dati workgroup su schermata "aggiungi nuovo PC" sistemato il 20/12/2004
+14/01/2005 non si riesce a fare submit su form inserimento/modifica  software con firefox | sistemato il 14/01/2005

@@ -1,0 +1,373 @@
+td {font-family:Verdana;font-size:8pt;font-weight:normal;}
+body{
+	background-color : #FFFFFF;
+	margin:1px;
+}
+A {
+	color : #9900FF;
+	text-decoration : none;
+}
+A:HOVER {
+	text-decoration : underline;
+}
+
+TH {
+	font-family : Garamond;
+	font-size : 10pt;
+	font-variant : small-caps;
+	color : Navy;
+}
+input,textarea{
+	font-size : 10pt;
+	color : #993300;
+	font-weight : bold;
+	font-family : Tahoma;
+}
+
+select{
+	background-color : #E0FFFF;
+	outline-style : none;
+}
+
+input.bottone{
+	background-color : #FFFFCC;
+	border : outset #CCCC33;
+	font-size : 10pt;
+	font-family : Verdana;
+	font-variant : normal;
+	text-transform : uppercase;
+	color : #3333CC;
+}
+input.bottone2{
+	background-color : #99CCFF;
+	border : thin outset #6699CC;
+	font-size : 8pt;
+	font-family : Verdana;
+	font-variant : normal;
+	text-transform : uppercase;
+	color : Black;
+}
+
+a.bottone{
+	background-color : Red;
+	border : outset #CCCC33;
+	font-size : 10pt;
+	font-family : Verdana;
+	font-variant : normal;
+	text-transform : uppercase;
+	color : White;
+}
+div.titolo1{
+	background-color : #006699;
+	color : White;
+	font-stretch : normal;
+	font-weight : bold;
+	font-family : Verdana;
+}
+TD.riga{
+	border-bottom : 1px dotted #000066;
+	padding : 8px;
+}
+td.bordocella
+	{
+	border: 1px dashed black;
+	}
+ul.query
+	{
+	margin:0px;
+	}
+li.query
+	{
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-left:20px; 
+	font-size:10px;
+	list-style : none;
+	}
+	
+table.software td	{
+	color : #3333CC;
+}
+table.software td.pari	{
+	background-color : #E6E6FA;
+}
+table.software td.dispari	{
+	background-color : #F0F8FF;
+}
+
+
+h2.software{
+	background-color : #CCFF99;
+	text-transform : uppercase;
+	text-decoration : none;
+	font-family : "Trebuchet MS";
+	font-style : italic;
+	color : #336633;
+}
+
+h3.software{
+	font-family : "Trebuchet MS";
+	font-style : italic;
+	color : #CC99CC;
+	font-variant : small-caps;
+}
+
+table.software input	{
+	 background-color : transparent;
+}
+table.software input.bottone{
+	color : White;
+	font-variant : small-caps;
+	background-color : Red;
+	border : 1px outset;
+}
+
+td.macchina	{
+	 background-color : #E9FAFF;
+}
+td.software	{
+	 background-color : #EFEDFF;
+}
+td.rete	{
+	 background-color : #fffacd;
+}
+td.caratteristiche	{
+	 background-color : #FFFAFA;
+}
+td.note	{
+	 background-color : #FFFFE5;
+}
+td.menutop	{
+	 background-color : gray;
+	 text-align:center;
+}
+fieldset legend{
+	font-weight: bold;
+	font-style : italic;
+	background-color : #6666ff;
+	color : White;
+}
+textarea.script
+	{
+	font-family : "Courier New";
+	font-size : 12px;
+	color : black;
+	font-weight: normal;
+	}
+
+/*------------------------*/
+	
+	
+div.menugenerale {
+	font-family : Verdana;
+	font-size : 9px;
+	font-variant : normal;
+	text-transform : uppercase;
+	text-align:left;
+	border-bottom: 1px solid red;
+
+}
+div.menugenerale a{
+	color : #CC0066;
+
+}
+
+div.menugenerale b{
+	color : #FF0000;
+}
+div.titolo {
+	font-family : Verdana;
+	font-size : 13px;
+	font-variant : normal;
+	text-transform : uppercase;
+	text-align:center;
+	border-bottom: 1px solid red;
+}
+
+div.barramenu {
+	font-family : "Lucida Console";
+	font-size : 15px;
+	font-weight : bold;
+	text-align:center;
+	text-transform : uppercase;
+	vertical-align:top;
+	margin: 4px;
+
+}
+div.barramenu b{
+	background-color:#BB0000;
+	color:white;
+}
+
+
+div.submenu {
+	font-family : "Arial";
+	font-size : 15px;
+	font-weight : bold;
+	text-align:center;
+	text-transform : uppercase;
+	background-color: navy;
+	color: white;
+}
+div.piepagina {
+	font-size:xx-small;
+	text-transform : uppercase;
+	text-align:center;
+	color: navy;
+	padding:10px;		
+}
+div.statusbar {
+	position:absolute;
+	font-size:x-small;
+	text-transform : uppercase;
+	text-align:center;
+	background-color: green;
+	color:white;
+}
+div.statusbarf {
+	position:fixed;
+  bottom:0px;
+  width: 100%;
+	font-size:small;
+	text-transform : uppercase;
+	text-align:center;
+	background-color: green;
+	color:white;
+}
+div.statusbarerr {
+	position:absolute;
+	font-size:x-small;
+	text-transform : uppercase;
+	text-align:center;
+	background-color: RED;
+	color:white;
+}form {
+	padding: 0px;
+	margin:0px;
+}
+
+div.generico,
+div.software,
+div.note, 
+div.rete,
+div.macchina, 
+div.caratteristiche{
+	 background-color : #eeeeee;
+	 font-family:verdana;
+	 font-size:11px;
+}
+
+div.macchina, div.caratteristiche{
+	 display:inline;
+	 vertical-align:top;
+	 width:50%;
+}
+div.note{
+	 text-align:center;
+}
+
+div.software div.titolo, 
+div.note div.titolo,
+div.rete div.titolo, 
+div.macchina	div.titolo, 
+div.caratteristiche div.titolo	{
+	 background-color : #add8e6;
+
+	 font-size:13px;
+	 text-align:center;
+}
+div.macchina	div.titolo, div.caratteristiche div.titolo{
+	 font-size:13px;
+	 text-align:center;
+ 
+}
+
+
+
+div.software input,
+div.macchina input,
+div.caratteristiche input,
+div.rete input,
+div.note textarea{
+	background-color:white;
+	border:1px solid #CCC;
+	}
+
+div.software strong,
+div.macchina strong,
+div.caratteristiche strong,
+div.rete strong,
+div.note strong{
+	color : #3333CC;
+	font-weight : bold;
+	border:1px solid gray;
+}
+h1.login
+	{
+	font-size:20px;
+	font-family:verdana;
+	text-align:center;
+	background-color: #6a5acd;
+	color:white;
+	}
+h2.login
+	{
+	font-size:12px;
+	font-family:verdana;
+	text-align:center;
+	color:#4682b4;
+	}
+h3.login
+	{
+	font-size:9px;
+	font-family:verdana;
+	text-align:center;
+	color:#4682b4;
+	}
+input.login
+	{
+	background-color:#87cefa;
+	font-size:12px;
+	border:0px;
+	color:white;
+	text-align:center;
+	}
+b.query
+	{
+	font-family:arial;
+	font-size:13px;
+	color:white;
+	background-color:#778899;
+	display:block;
+	}
+div#finestrina,div#sceltapos
+	{
+	border: 1px solid black;
+	width: 300px;
+	height: 400px;
+	overflow: scroll;
+	position: absolute;
+	background-color:white;
+	display:none;
+	z-index:100;
+	}	
+	
+.vocemenu
+	{
+	font-family: Verdana;
+	font-size:12px;
+	font-variant : small-caps;
+	border : 1px solid #DCDCDC;
+  display:inline;
+  padding:5px;
+  -moz-border-radius:15%;
+	}
+  
+ div#scroller{
+ width:90%;
+ height: 70%;
+ overflow: auto; 
+ border: 1px solid black;
+ }
+ 

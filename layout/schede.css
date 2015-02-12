@@ -1,0 +1,50 @@
+ 	div#titolo{
+   	height:20px;
+  	width:100%;
+  	overflow:hidden;
+  	background-color:#cccccc;
+  	border:1px solid black;
+	}
+	div#scheda1,
+	div#scheda2,
+	div#scheda3,
+	div#scheda4,
+	div#scheda5,
+	div#scheda6{
+   	height:400px;
+  	width:100%;
+  	position:absolute;
+  	overflow:hidden;
+  	border: 1px solid blue;
+  	background-color:#DDDDDD;
+	}
+	
+	div#scheda1{display:block;}
+	div#scheda2{display:none;}
+	div#scheda3{display:none;}
+	div#scheda4{display:none;}
+	div#scheda5{display:none;}
+	div#scheda6{display:none;}
+	
+	div#linguetta1,
+	div#linguetta2,
+	div#linguetta3,
+	div#linguetta4,
+	div#linguetta5,
+	div#linguetta6{
+		float:left;
+		border:1px solid gray;
+		padding-left:5px;
+		padding-right:5px;
+	}
+	div#linguetta1{	background-color:yellow;}
+	div#titolo hr{
+	clear:left;
+	display:none;
+	}
+	
+div#schede{
+	float:right;
+	width:100%;
+	
+}
