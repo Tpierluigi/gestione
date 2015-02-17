@@ -1,7 +1,7 @@
 td {font-family:Verdana;font-size:8pt;font-weight:normal;}
 body{
 	background-color : #FFFFFF;
-	margin:1px;
+	padding-top: 48px;
 }
 A {
 	color : #9900FF;
@@ -371,3 +371,6 @@ div#finestrina,div#sceltapos
  border: 1px solid black;
  }
  
+ nav{
+     background-color: #ccccff;
+ }

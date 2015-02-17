@@ -1,79 +1,112 @@
-{if $_codusr > 0}
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-  <HTML>
-  <HEAD>
-      <TITLE>Gestione PC e apparecchi industriali v. {$app_version}</TITLE>
-      <META http-equiv=Content-Type content="text/html; charset=windows-1252">
-      <META content="MSHTML 6.00.2800.1106" name=GENERATOR>
 
-      <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">
-      <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
-      <link rel="stylesheet" type="text/css" href="stilep.css"  media="print">
- 
-    <link rel="StyleSheet" href="lib/dtree/dtree.css" type="text/css" />
-    <script type="text/javascript" src="lib/dtree/dtree.js"></script>
-    <script type='text/javascript' src='dFilter.js'></script>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+    <HEAD>
+        <TITLE>Gestione PC e apparecchi industriali v. {$app_version}</TITLE>
+        <META http-equiv=Content-Type content="text/html; charset=windows-1252">
+        <META content="MSHTML 6.00.2800.1106" name=GENERATOR>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  {literal}
-    <script type="text/javascript" language="javascript">
-      function eseguiAzione(val,nomeform)
-      	{
-      	scheda=document.getElementById(nomeform);
-      	scheda.azione.value=val;
-      	scheda.submit();
-      	}
-    </script>
+        <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="stilep.css"  media="print">
+
+        <link rel="StyleSheet" href="lib/dtree/dtree.css" type="text/css" />
+        <script type="text/javascript" src="lib/dtree/dtree.js"></script>
+        <script type='text/javascript' src='dFilter.js'></script>
+        <!--- libreria jquery -->
+        <script type="text/javascript" src="lib/js/jquery-1.11.2.min.js"></script>
+        <!-- jquery UI -->
+        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.min.css" rel="stylesheet" />	
+        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.structure.min.css" rel="stylesheet" />	
+        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.theme.min.css" rel="stylesheet" />	
+        <script type="text/javascript" src="lib/js/jquery-ui-1.11.3/jquery-ui.min.js"></script>        
+        
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="lib/js/html5shiv.min.js"></script>
+          <script src="lib/js/respond.min.js"></script>
+        <![endif]-->
+        
+        <!-- Bootstrap -->
+        <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="lib/js/bootstrap.min.js"></script>
+
+        {literal}
+            <script type="text/javascript" language="javascript">
+                function eseguiAzione(val, nomeform)
+                {
+                    scheda = document.getElementById(nomeform);
+                    scheda.azione.value = val;
+                    scheda.submit();
+                }
+            </script>
 
 
-  {/literal}
-  </HEAD>
-  <BODY>
-  <div class="titolo">
-  <STRONG>Gestione PC e apparecchi industriali V.{$SWver} Utente: {$_datiutente->UserName}</STRONG>
-  <STRONG>pagina:{$_SESSION[activepage]} ordine:{$_SESSION[activeorder]}</STRONG>
-  </div>
-  <div class="menugenerale">
-  <b>MENU GENERALE &gt;&gt; </b>
-  <a href="index.php?modulo=mainmenu">Vai a menu generale</a><br>
-  <b>GESTIONE PC &gt;&gt; </b>
-    <a href="index.php?modulo=sfogliapc&app=PC">Gestione PC</a> -
-    <a href="index.php?modulo=gestionetipisw&app=PC">Gestione software</a> -
-    <a href="index.php?modulo=tipifunzione&app=PC">Gestione funzioni</a> -
-    <a href="index.php?modulo=gestionetipi&app=PC">Gestione tipi apparecchiature</a> -
-    <a href="index.php?modulo=interrogazioni">Interrogazioni SQL</a> -
-    <a href="index.php?modulo=doscript">Esecuzione script programma</a> <br>
-  
-	<b>GESTIONE STAMPANTI &gt;&gt; </b>
-    <a href="index.php?modulo=sfoglia&app=stampanti">Stampanti</a> -
-    <a href="index.php?modulo=posizioni&app=stampanti">Posizioni stampante</a> -
-    <a href="index.php?modulo=opzioni&app=stampanti">Opzioni stampante</a> -
-    <a href="index.php?modulo=modelli&app=stampanti">Modelli stampante</a> -
-    <a href="index.php?modulo=tipiintervento&app=stampanti">Tipi intervento</a> <br>
- 
-	<b>GESTIONE IP &gt;&gt; </b>
-  	 <a href="index.php?modulo=sfoglia&app=ipaddress">Gestione Indirizzi</a> -
-    <a href="index.php?modulo=search&app=ipaddress">Cerca indirizzo</a> <br>
-  <b>GESTIONE POSIZIONI &gt;&gt; </b>
-  	 <a href="index.php?modulo=impianti">Gestione impianti</a> -
-  	 <a href="index.php?modulo=sedi">Gestione sedi</a> -
-    <a href="index.php?modulo=paesi">Elenco nazioni</a> <br>
-  <b>GESTIONE UTENTI &gt;&gt; </b>
-    <a href="index.php?modulo=gestioneutenti">Gestione utenti</a> -
-    <a href="index.php?modulo=cambiopwd">Cambio password</a> -
-    <a href="index.php?modulo=logout">Logout</a>
-  </div>
-{else}
-  <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-  <HTML>
-  <HEAD>
-      <TITLE>Gestione PC e apparecchi industriali v. {$SWver}</TITLE>
-      <META http-equiv=Content-Type content="text/html; charset=windows-1252">
-      <META content="MSHTML 6.00.2800.1106" name=GENERATOR>
-  
-      <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">
-      <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
-      <link rel="stylesheet" type="text/css" href="stilep.css"  media="print">
-  
-  </HEAD>
-  <BODY>
-{/if}  
+        {/literal}
+    </HEAD>
+    <BODY>
+        {if $_codusr > 0}
+            <div class="container">
+                <div class="titolo">
+                    <STRONG>Gestione PC e apparecchi industriali V.{$SWver} Utente: {$_datiutente->UserName}</STRONG>
+                    <STRONG>pagina:{$_SESSION[activepage]} ordine:{$_SESSION[activeorder]}</STRONG>
+                </div>
+                <nav class="navbar  navbar-fixed-top">
+                    <div class="container">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="index.php?modulo=mainmenu">Vai a menu generale</a>
+                                </LI>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE PC</A>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?modulo=sfogliapc&app=PC">Gestione PC</a></li>
+                                        <li><a href="index.php?modulo=gestionetipisw&app=PC">Gestione software</a></li>
+                                        <li><a href="index.php?modulo=tipifunzione&app=PC">Gestione funzioni</a></li>
+                                        <li><a href="index.php?modulo=gestionetipi&app=PC">Gestione tipi apparecchiature</a></li>
+                                        <li><a href="index.php?modulo=interrogazioni">Interrogazioni SQL</a></li>
+                                        <li><a href="index.php?modulo=doscript">Esecuzione script programma</a></li>
+                                    </ul>
+                                </LI>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE POSIZIONI </A>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?modulo=impianti">Gestione impianti</a></li>
+                                        <li><a href="index.php?modulo=sedi">Gestione sedi</a></li>
+                                        <li><a href="index.php?modulo=paesi">Elenco nazioni</a></li>
+                                    </UL>
+                                </LI>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE UTENTI</A>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.php?modulo=gestioneutenti">Gestione utenti</a></li>
+                                        <li><a href="index.php?modulo=cambiopwd">Cambio password</a></li>
+                                        <li><a href="index.php?modulo=logout">Logout</a></li>
+                                    </UL>
+                                </li>
+                            </UL>
+                        </DIV>
+                    </div>
+                </nav>
+            </DIV>
+        {/if}  
+    <BODY>
+
+
+
+
