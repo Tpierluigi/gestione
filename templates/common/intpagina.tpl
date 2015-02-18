@@ -23,14 +23,14 @@
         <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.structure.min.css" rel="stylesheet" />	
         <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.theme.min.css" rel="stylesheet" />	
         <script type="text/javascript" src="lib/js/jquery-ui-1.11.3/jquery-ui.min.js"></script>        
-        
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
           <script src="lib/js/html5shiv.min.js"></script>
           <script src="lib/js/respond.min.js"></script>
         <![endif]-->
-        
+
         <!-- Bootstrap -->
         <link href="lib/css/bootstrap.min.css" rel="stylesheet">
         <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -51,11 +51,11 @@
     </HEAD>
     <BODY>
         {if $_codusr > 0}
+            <div class="page-header">
+                <h5>Gestione PC e apparecchi industriali V.{$SWver} Utente: {$_datiutente->UserName}</h5>
+                <h6>pagina:{$_SESSION[activepage]} ordine:{$_SESSION[activeorder]}</h6>
+            </div>
             <div class="container">
-                <div class="titolo">
-                    <STRONG>Gestione PC e apparecchi industriali V.{$SWver} Utente: {$_datiutente->UserName}</STRONG>
-                    <STRONG>pagina:{$_SESSION[activepage]} ordine:{$_SESSION[activeorder]}</STRONG>
-                </div>
                 <nav class="navbar  navbar-fixed-top">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
@@ -66,12 +66,13 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
+                            <a class="navbar-brand" href="index.php?modulo=mainmenu">
+                                <img src="icons/logo.png">
+                            </a>
                         </div>
                         <div class="collapse navbar-collapse">
                             <ul class="nav navbar-nav">
-                                <li>
-                                    <a href="index.php?modulo=mainmenu">Vai a menu generale</a>
-                                </LI>
+
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE PC</A>
                                     <ul class="dropdown-menu">

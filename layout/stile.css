@@ -373,4 +373,11 @@ div#finestrina,div#sceltapos
  
  nav{
      background-color: #ccccff;
+     height: 48px;
+ }
+ a.navbar-brand{
+     padding: 0px;
+ }
+  .navbar-fixed-top{
+     height: 48px;
  }
