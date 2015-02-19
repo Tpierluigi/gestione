@@ -1,4 +1,6 @@
 td {font-family:Verdana;font-size:8pt;font-weight:normal;}
+th {font-family:Verdana;font-size:8pt;font-weight:bold;}
+
 body{
 	background-color : #FFFFFF;
 	padding-top: 48px;
@@ -11,12 +13,7 @@ A:HOVER {
 	text-decoration : underline;
 }
 
-TH {
-	font-family : Garamond;
-	font-size : 10pt;
-	font-variant : small-caps;
-	color : Navy;
-}
+
 input,textarea{
 	font-size : 10pt;
 	color : #993300;

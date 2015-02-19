@@ -33,6 +33,7 @@
 
         <!-- Bootstrap -->
         <link href="lib/css/bootstrap.min.css" rel="stylesheet">
+        <link href="lib/css/bootstrap-table.min.css" rel="stylesheet">
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="lib/js/bootstrap.min.js"></script>
 
@@ -51,10 +52,6 @@
     </HEAD>
     <BODY>
         {if $_codusr > 0}
-            <div class="page-header">
-                <h5>Gestione PC e apparecchi industriali V.{$SWver} Utente: {$_datiutente->UserName}</h5>
-                <h6>pagina:{$_SESSION[activepage]} ordine:{$_SESSION[activeorder]}</h6>
-            </div>
             <div class="container">
                 <nav class="navbar  navbar-fixed-top">
                     <div class="container">
@@ -100,6 +97,10 @@
                                         <li><a href="index.php?modulo=logout">Logout</a></li>
                                     </UL>
                                 </li>
+                            </UL>
+                            <ul class="nav navbar-nav navbar-right">
+                                <small>Gestione PC e apparecchi industriali V.{$SWver}</small>
+                                <small> Utente: {$_datiutente->UserName}</small>
                             </UL>
                         </DIV>
                     </div>
