@@ -16,9 +16,9 @@
 </head>
 <body>
     <header>
-    <h1 class=login>GESTIONE PC INDUSTRIALI</h1>
-    <h2 class=login>AUTORIZZAZIONE INGRESSO</h2>
-    <h3 class=login>(Premere il tasto 'LOGIN' per entrare come ospite)</h3>
+    <h1 class="login">GESTIONE PC INDUSTRIALI</h1>
+    <h2 class="login">AUTORIZZAZIONE INGRESSO</h2>
+    <h3 class="login">(Premere il tasto 'LOGIN' per entrare come ospite)</h3>
     </header>
     <div class="content">
         <div class="row">

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <HTML>
     <HEAD>
-        <TITLE>Gestione PC e apparecchi industriali v. {$app_version}</TITLE>
+        <TITLE>Gestione PC e apparecchi industriali v. {$SWver}</TITLE>
         <META http-equiv=Content-Type content="text/html; charset=windows-1252">
         <META content="MSHTML 6.00.2800.1106" name=GENERATOR>
         <meta charset="utf-8">

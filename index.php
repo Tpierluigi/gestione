@@ -83,7 +83,6 @@ if (isset($modulo)) {
 
 $contenuto = ob_get_contents();
 ob_end_clean();
-
 include("layout/intpagina.php");
 echo $contenuto;
 include("layout/piepagina.php");
