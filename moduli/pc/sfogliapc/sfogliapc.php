@@ -20,13 +20,28 @@ $dati = $db->get_results($testoqry);
 <div class="container">
     <div class="riga">
         <div class="col-sm-10">
+            <div id="toolbar" class="btn-group">
+                <button type="button" class="btn btn-default" id="nuovo">
+                    <i class="glyphicon glyphicon-plus"></i>
+                </button>
+                <button type="button" class="btn btn-default" id="modifica">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                </button>
+                <button type="button" class="btn btn-default" id="cancella">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+            </div>
             <table data-toggle="table"        
                    data-search="true" id="listapc" 
                    data-height="500"
+                   data-toolbar="#toolbar"
+                   data-click-to-select="true"
+                   data-select-item-name="selezionato"
                    >
                 <thead>
                     <tr>
-                        <th  data-sortable="true">ID</th>
+                        <th data-radio="true"></th>
+                        <th data-sortable="true">ID</th>
                         <th data-sortable="true">SN</th>
                         <th data-sortable="true">TIPO</th>
                         <th data-sortable="true">FUNZIONE</th>
@@ -66,6 +81,7 @@ $dati = $db->get_results($testoqry);
                         }
                         ?>
                         <tr>
+                            <td></td>
                             <td><?= sprintf("%04d", $riga->ID); ?> </td>
                             <td><?= $riga->SN; ?></td>
                             <td><?= $riga->tipo; ?></td>
@@ -81,84 +97,41 @@ $dati = $db->get_results($testoqry);
     </div>
 </div>
 
-<!--
-<div id="gridpager"></div> 
 <div id="messaggi" title="seleziona un PC"><p>SELEZIONA UN PC DA EDITARE/MODIFICARE</p></div>
--->
 <script src="lib/js/bootstrap-table.min.js"></script>
 <!-- put your locale files after bootstrap-table.js -->
 <script src="lib/js/bootstrap-table-it-IT.min.js"></script>
 <script type="text/javascript">
-     $(window).resize(function () {
-        $('#listapc').bootstrapTable('resetView');
+    $(function () {
+        var selezionato = 0;
+        //definisco il gestore evento per la tabella
+        $('#listapc').on('check.bs.table', function (e, row) {
+            //l'id si trova all'elemento 1 dell'array 'row'
+            selezionato = row[1];
+        });
+         //inizializzo il dialog box per i messaggi
+        $("#messaggi").dialog(
+                {autoOpen: false,
+                    modal: true,
+                    show: 'drop',
+                    hide: 'drop',
+                    resizable: false,
+                    buttons: {"Ok": function () {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+        //gestori per i bottoni
+        $("#nuovo").click(function(){
+            window.location.href = "index.php?modulo=computer&app=PC&id=";
+        });
+        $("#modifica").click(function(){
+            if(selezionato>0){
+                window.location.href = "index.php?modulo=computer&app=PC&id=" + selezionato;
+            }else {
+                $("#messaggi").dialog('open');
+            }
+        });
+        
     });
-    /*
-     //inizializzo il dialog box per i messaggi
-     $("#messaggi").dialog(
-     {autoOpen: false,
-     modal: true,
-     show: 'drop',
-     hide: 'drop',
-     resizable: false,
-     buttons: {"Ok": function () {
-     $(this).dialog("close");
-     }}});
-     // creo la grid dalla tabella caricata..
-     // come opzioni specifico il DIV relativo al pager e le opzioni del pager...
-     tableToGrid("#listapc", {pager: '#gridpager', pgtext: "", recordtext: "", pgbuttons: false});
-     $("#listapc").setGridHeight("80%");
-     //aggiungo al pager i botto ni del navigatr (solo search e refresh alla fine..)
-     $("#listapc").navGrid('#gridpager', {view: false, del: false, edit: false, add: false});
-     //dato che quelli predefiniti non mi servono aggiungo i tre bottoni aggiungi, vedi, edita
-     $("#listapc").navButtonAdd("#gridpager",
-     {caption: 'Vedi dati',
-     buttonicon: 'ui-icon-search',
-     onClickButton: function () {
-     callerEdit(0);
-     }, //notare la maniera di passare il gestore evento con dei parametri
-     position: "first",
-     title: "Vedi dati'"});
-     $("#listapc").navButtonAdd("#gridpager",
-     {caption: 'Modifica',
-     buttonicon: 'ui-icon-pencil',
-     onClickButton: function () {
-     callerEdit(1);
-     },
-     position: "first",
-     title: "Modifica'"});
-     $("#listapc").navButtonAdd("#gridpager",
-     {caption: 'Aggiungi PC',
-     buttonicon: 'ui-icon-plusthick',
-     onClickButton: function () {
-     callerEdit(2);
-     },
-     position: "first",
-     title: "Aggiungi PC'"});
-     
-     function callerAdd() {
-     window.location.href = "index.php?modulo=computer&app=PC&id=";
-     }
-     
-     function callerEdit(mode) {
-     var id = $("#listapc").getGridParam('selrow');
-     if (mode == 2)
-     //aggiunta
-     window.location.href = "index.php?modulo=computer&app=PC";
-     else {
-     if (id) {
-     var ret = $("#listapc").getRowData(id);
-     if (mode == 1)
-     //modifica
-     window.location.href = "index.php?modulo=computer&app=PC&id=" + ret.ID;
-     if (mode == 0)
-     //visualizzazione
-     window.location.href = "index.php?modulo=schedapc&app=PC&id=" + ret.ID;
-     }
-     else {
-     $("#messaggi").dialog('open');
-     
-     }
-     }
-     }
-     */
 </script>

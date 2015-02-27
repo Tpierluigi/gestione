@@ -11,11 +11,9 @@
 
         <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">
         <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="stilep.css"  media="print">
 
         <link rel="StyleSheet" href="lib/dtree/dtree.css" type="text/css" />
         <script type="text/javascript" src="lib/dtree/dtree.js"></script>
-        <script type='text/javascript' src='dFilter.js'></script>
         <!--- libreria jquery -->
         <script type="text/javascript" src="lib/js/jquery-1.11.2.min.js"></script>
         <!-- jquery UI -->
@@ -107,7 +105,7 @@
                 </nav>
             </DIV>
         {/if}  
-    <BODY>
+ 
 
 
 
