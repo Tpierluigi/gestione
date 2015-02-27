@@ -8,7 +8,6 @@ require_once("lib/barramenu.php");
 require_once("lib/clsDBlink.php");
 require_once("lib/clstree.php");
 require_once('lib/smarty/libs/Smarty.class.php');
-require_once('lib/xajax/xajax.inc.php');
 require_once('lib/JSON.php');
 
 
