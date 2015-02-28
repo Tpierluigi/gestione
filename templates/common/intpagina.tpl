@@ -17,11 +17,9 @@
         <!--- libreria jquery -->
         <script type="text/javascript" src="lib/js/jquery-1.11.2.min.js"></script>
         <!-- jquery UI -->
-        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.min.css" rel="stylesheet" />	
-        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.structure.min.css" rel="stylesheet" />	
-        <link type="text/css" href="lib/js/jquery-ui-1.11.3/jquery-ui.theme.min.css" rel="stylesheet" />	
-        <script type="text/javascript" src="lib/js/jquery-ui-1.11.3/jquery-ui.min.js"></script>        
-
+        <link href="lib/js/jquery-ui/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="lib/js/jquery-ui/jquery-ui.js"></script>
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
