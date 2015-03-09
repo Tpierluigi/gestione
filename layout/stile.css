@@ -13,14 +13,6 @@ A:HOVER {
 	text-decoration : underline;
 }
 
-
-input,textarea{
-	font-size : 10pt;
-	color : #993300;
-	font-weight : bold;
-	font-family : Tahoma;
-}
-
 select{
 	background-color : #E0FFFF;
 	outline-style : none;
@@ -364,4 +356,8 @@ b.query
  }
   .navbar-fixed-top{
      height: 48px;
+ }
+ 
+ .sezione{
+     height: 64px;
  }

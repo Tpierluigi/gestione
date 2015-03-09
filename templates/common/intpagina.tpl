@@ -9,8 +9,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">
-        <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
 
         <link rel="StyleSheet" href="lib/dtree/dtree.css" type="text/css" />
         <script type="text/javascript" src="lib/dtree/dtree.js"></script>
@@ -30,6 +28,10 @@
         <!-- Bootstrap -->
         <link href="lib/css/bootstrap.min.css" rel="stylesheet">
         <link href="lib/css/bootstrap-table.min.css" rel="stylesheet">
+        <!-- stili custom sito -->
+        <link rel="stylesheet" type="text/css" href="layout/stile.css" media="screen">  
+        <link rel="stylesheet" type="text/css" href="layout/schede.css" media="screen">
+
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="lib/js/bootstrap.min.js"></script>
 
