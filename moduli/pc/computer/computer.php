@@ -121,7 +121,7 @@ if (verificalivello(2)):
 
     <?php if ($fNuovaURL != ""): ?>
         <script language="JavaScript" type="text/javascript">
-            document.location.href = '<?= $fNuovaURL ?>';</script>
+                    document.location.href = '<?= $fNuovaURL ?>';</script>
     <?php endif; ?>
 
 
@@ -277,179 +277,192 @@ if (verificalivello(2)):
                                 </div>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="caratteristiche">
-                                <table>
-                                    <tr>
-                                        <td>Pollici</td>
-                                        <td>
-                                            <input type="text" size="4" name="pollici" value="<?= $dati->pollici; ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tipo:</td>
-                                        <td><input type=text size=7 name=tipomon value=<?= $dati->tipomon; ?>></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Motherboard:</td> 
-                                        <td><input type=text name=madre value=<?= $dati->madre; ?>></td>
-                                    </tr>
-                                    <tr>
-                                        <td>CPU:</td> 
-                                        <td><input type=text name=CPU value=<?= $dati->CPU; ?>></td>
-                                    </tr>
-                                    <tr>
-                                        <td>RAM:</td> 
-                                        <td><input type=text name=RAM value=<?= $dati->RAM; ?>>Mb</td>
-                                    </tr>
-                                    <tr>
-                                        <td>HD:</td> 
-                                        <td><input type=text name=HD value=<?= $dati->HD; ?>></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Lettore ottico 1: tipo
-                                        </td>
-                                        <td>
-                                            <input type=text name=lettore1 value=<?= $dati->lettore1; ?>>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Lettore ottico 2: tipo
-                                        </td>
-                                        <td>
-                                            <input type=text name=lettore2 value=<?= $dati->lettore2; ?>>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Scheda video</td>
-                                        <td><input type=text name=skvideo value=<?= $dati->skvideo; ?>></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sezione audio</td>
-                                        <td><input type=text name=audio value=<?= $dati->audio; ?>></td>
-                                    </tr>
-                                </table>
+
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Monitor: pollici</label>
+                                            <input type="text" class="form-control" name="pollici" value="<?= $dati->pollici; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Monitor: tipo</label> 
+                                            <input class="form-control" type = "text"  size = "30" name = "marca" value = "<?= $dati->marca; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label"> Marca e tipo motherboard</label>
+                                            <input type="text" class="form-control" name="madre" value="<?= $dati->madre; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">CPU</label> 
+                                            <input class="form-control" type = "text"  size = "30" name = "CPU" value = "<?= $dati->CPU; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">RAM</label>
+                                            <input type="text" class="form-control" name="RAM" value="<?= $dati->RAM; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Hard disk</label> 
+                                            <input class="form-control" type = "text"  size = "30" name = "HD" value = "<?= $dati->HD; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Unita' ottica</label>
+                                            <input type="text" class="form-control" name="lettore1" value="<?= $dati->lettore1; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Seconda unità alternativa</label> 
+                                            <input class="form-control" type = "text"  size = "30" name = "lettore2" value = "<?= $dati->lettore2; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Scheda video</label>
+                                            <input type="text" class="form-control" name="skvideo" value="<?= $dati->skvideo; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Sezione audio</label> 
+                                            <input class="form-control" type = "text"  size = "30" name = "audio" value = "<?= $dati->audio; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                             <div role="tabpanel" class="tab-pane" id="rete">
-                                <table>
-                                    <tr>
-                                        <td>
-                                            Rete 1: Tipo :  
-                                        </td>
-                                        <td> 
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 1: tipo</label>
                                             <input type="text" name="skrete1" value="<?= $dati->skrete1; ?>">
-                                        </td>
-                                        <td>
-                                            Rete 2: Tipo :  
-                                        </td>
-                                        <td> 
-                                            <input type="text" name="skrete2" value="<?= $dati->skrete2; ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Rete 1: IP Address :
-                                        </td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 2: tipo</label>
+                                            <input type="text" name="skrete1" value="<?= $dati->skrete2; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 1: IP address</label>
                                             <input type="text" size=15 maxlenght="15" name="IP" value="<?= NormalizeIP($dati->IPAddress) ?>">
-                                        </td>
-                                        <td>
-                                            Rete 2: IP Address :
-                                        </td>
-                                        <td>
-                                            <input type="text" size=15 maxlenght="15" name="IP2" value="<?= NormalizeIP($dati->IPAddress2) ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Rete 1: IP NetMask : 
-                                        </td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 2: IP address</label>
+                                            <input type="text" size=15 maxlenght="15" name="IP" value="<?= NormalizeIP($dati->IPAddress2) ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 1: Netmask</label>
                                             <input type="text" size=15 maxlenght="15" name="NM" value="<?= NormalizeIP($dati->Netmask) ?>">
-                                        </td>
-                                        <td>
-                                            Rete 2: IP NetMask : 
-                                        </td>
-                                        <td>
-                                            <input type="text" size=15 maxlenght="15" name="NM2" value="<?= NormalizeIP($dati->Netmask2) ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Rete 1: Gateway : 
-                                        </td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 2: Netmask</label>
+                                            <input type="text" size=15 maxlenght="15" name="NM" value="<?= NormalizeIP($dati->Netmask2) ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 1: Gateway</label>
                                             <input type="text" size=15 maxlenght="15" name="GW1" value="<?= NormalizeIP($dati->Gateway) ?>">
-                                        </td>
-                                        <td>
-                                            Rete 2: Gateway : 
-                                        </td>
-                                        <td>
-                                            <input type="text" size=15 maxlenght="15" name="GW2" value="<?= NormalizeIP($dati->Gateway2) ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan='4'>
-                                            <hr>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Gruppo di lavoro o Dominio : 
-                                        </td>
-                                        <td>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Rete 2: Gateway</label>
+                                            <input type="text" size=15 maxlenght="15" name="GW1" value="<?= NormalizeIP($dati->Gateway2) ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Password amministrativa</label>
+                                            <input type="text" size=12 name="passwordAdmin" value="<?= $dati->AdminPWD; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Password VNC</label> 
+                                            <input type="text" size=8 maxlenght=8 name="passwordVNC" value="<?= $dati->VNCPWD; ?>">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Nome utente default</label>
+                                            <input type="text" size=15 maxlenght="15" name="nomeutente" value="<?= $dati->UserName; ?>">
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Password utente default</label> 
+                                            <input type="text" size=15 maxlenght="15" name="pwutente" value="<?= $dati->UserPWD; ?>">
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <div class="form-group">
+                                            <label class="control-label">Gruppo di lavoro o dominio</label> 
                                             <select name="GroupType">
 
                                                 <option value="" <?= $sel; ?>>ALTRO/N.A.</option>
                                                 <option value="W" <?= $selW; ?>>WORKGROUP</option>
                                                 <option value="D" <?= $selD; ?>>DOMINIO</option>
                                             </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Nome Gruppo/dominio : 
-                                        </td>
-                                        <td>
-                                            <input type="text" size=20 maxlenght="20" name="GroupName" value="<?= $dati->NomeGruppo; ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td> ID di rete</td>
-                                        <td> 
-                                            <input type="text" size=20 maxlenght=32 value="<?= $dati->IDrete; ?>"name="NetID">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan='4'>
-                                            <hr>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Password Amministrativa</td>
-                                        <td> 
-                                            <input type="text" size=12 name="passwordAdmin" value="<?= $dati->AdminPWD; ?>">
-                                        </td>
-                                        <td>Password VNC</td>
-                                        <td> 
-                                            <input type="text" size=8 maxlenght=8 name="passwordVNC" value="<?= $dati->VNCPWD; ?>">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            Default user name : 
-                                        </td>
-                                        <td>
-                                            <input type="text" size=15 maxlenght="15" name="nomeutente" value="<?= $dati->UserName; ?>">
-                                        </td>
-                                        <td>
-                                            Default password : 
-                                        </td>
-                                        <td>
-                                            <input type="text" size=15 maxlenght="15" name="pwutente" value="<?= $dati->UserPWD; ?>">
-                                        </td>
-                                    </tr>
-                                </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label class="control-label">Nome gruppo o dominio</label> 
+                                        <input type="text" size=20 maxlenght="20" name="GroupName" value="<?= $dati->NomeGruppo; ?>">
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-4">
+                                        <label class="control-label">Identificativo PC</label> 
+                                        <input type="text" size=20 maxlenght=32 value="<?= $dati->IDrete; ?>"name="NetID">
+                                    </div>
+                                </div>
+
                             </div>
                             <div role="tabpanel" class="tab-pane" id="software">
                                 <?= $elencoSwHtml ?>
