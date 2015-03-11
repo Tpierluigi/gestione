@@ -361,3 +361,6 @@ b.query
  .sezione{
      height: 64px;
  }
+ .contextMenu div{
+     padding :10px;
+ }
