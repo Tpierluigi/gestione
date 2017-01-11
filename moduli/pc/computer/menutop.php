@@ -1,4 +1,4 @@
-<?
+<?php
 $menubar=new barramenu;
 
 if ($dati->ID>0)

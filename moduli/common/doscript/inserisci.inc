@@ -1,4 +1,4 @@
-<?
+<?php
 $NomeScript=$_POST['fNomeScript'];
 $TestoScript=stripslashes($_POST['fTestoScript']);
 $TestoScript=str_replace("'","''",$TestoScript);

@@ -1,4 +1,4 @@
-<?
+<?php
 $dati=$db->get_results("SELECT ID,descrizione FROM tipiapparecchi ORDER BY Descrizione");
 echo "<div align=\"center\"><div id=\"scroller\">";
 echo "<table class=\"software\"> ";

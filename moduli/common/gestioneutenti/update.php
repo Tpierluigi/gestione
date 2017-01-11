@@ -1,4 +1,4 @@
-<?
+<?php
 /*sezione che contiene lo script di modifica dell'utente nel database*/
 	 //controllo che la password sia inserita nel modo corretto
 if (($_POST['password'])==($_POST['checkpassword']))

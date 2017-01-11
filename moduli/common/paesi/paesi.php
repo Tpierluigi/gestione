@@ -1,4 +1,4 @@
-<?
+<?php
 
 if (verificalivello(2))
 	{
@@ -52,7 +52,7 @@ if (verificalivello(2))
     echo "<h3>Nuovo Paese</h3>";
     echo "  Codice: <input type=\"text\" name=\"idpaese\" size=2 maxlenght=2><br>";
     echo "  Descrizione: <input type=\"text\" name=\"Descrizione\" size=30><br>";
-    echo "  icona: <input type=\"text\" name=\"icona\" value=\"icons/flags/unknown.gif\" size=30>";
+    echo "  icona: <input type=\"text\" name=\"icona\" value=\"icone/flags/unknown.gif\" size=30>";
 
   	}
   echo "</form>";

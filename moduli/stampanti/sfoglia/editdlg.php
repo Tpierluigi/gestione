@@ -1,4 +1,4 @@
-<?
+<?php
 require_once("../../../lib/ez_sql.php");
 require_once("../../../lib/generali.php");
 require_once("../../../lib/check.php");

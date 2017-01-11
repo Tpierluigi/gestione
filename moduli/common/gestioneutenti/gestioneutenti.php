@@ -1,4 +1,4 @@
-<?
+<?php
 //*********+MODULO PER LA GESTIONE AMMINISTRATIVA DEGLI UTENTI********************
 if (verificalivello(0))
 	{

@@ -1,4 +1,4 @@
-<?
+<?php
 /**
 * Ritorna il tipo di immagine
 * @return String with the value of the field
@@ -342,6 +342,12 @@ function JSON_string($variabile){
 	
 	return $val;
 }
-
+function setWithDefault(&$from, $default){
+    if (isset($from)){
+        return $from;
+    } else {
+        return $default;
+    }
+}
 
 ?>

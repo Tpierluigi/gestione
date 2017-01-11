@@ -1,4 +1,4 @@
-<?
+<?php
 $dati=$db->get_results("
 SELECT aziende.id_azienda, paesi.descrizione, 
     aziende.sito

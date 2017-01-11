@@ -6,12 +6,12 @@
 </HEAD>
 <BODY>
 
-<?
+<?php
 include_once("ez_sql.php");
 $_codusr=$_COOKIE['id'];
 
 $_datiutente=@$db->get_row("select * from utenti where ID=$_codusr"); 
 
 ?>
-<P align=center><STRONG>Gestione PC e apparecchi industriali V.1.0<br> Utente: <?echo $_datiutente->UserName;?></STRONG></P>
+<P align=center><STRONG>Gestione PC e apparecchi industriali V.1.0<br> Utente: <?phpecho $_datiutente->UserName;?></STRONG></P>
 <hr noshade>

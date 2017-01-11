@@ -6,7 +6,7 @@
 </HEAD>
 <BODY>
 
-<?
+<?php
 
 $_codusr=$_COOKIE['id'];
 $conn=mssql_connect("srvlotti","sa","");
@@ -14,5 +14,5 @@ mssql_select_db("PC");
 $_datiutente=@mssql_fetch_object(@mssql_query("select * from utenti where ID=$_codusr")); 
 
 ?>
-<P align=center><STRONG>Gestione PC e apparecchi industriali V.1.0<br> Utente: <?echo $_datiutente->UserName;?></STRONG></P>
+<P align=center><STRONG>Gestione PC e apparecchi industriali V.1.0<br> Utente: <?phpecho $_datiutente->UserName;?></STRONG></P>
 <hr noshade>

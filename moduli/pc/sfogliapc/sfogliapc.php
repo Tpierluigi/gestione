@@ -1,15 +1,12 @@
-<?
-session_start();
+<?php
 verificalivello(3);
 
 if (isset($_GET['ord'])) {
     $activeorder = $_GET['ord'];
     $_SESSION['activeorder'] = $activeorder;
 } else
-    $activeorder = $_SESSION['activeorder'];
+    $activeorder = setWithDefault ($_SESSION['activeorder'], "a.ID");
 
-if ($activeorder == "")
-    $activeorder = "a.ID";
 
 $testoqry = "";
 $testoqry.="SELECT a.ID, ta.descrizione AS tipo,a.posizione,a.SN,a.idRete,";
@@ -52,7 +49,7 @@ $dati = $db->get_results($testoqry);
                 </thead>
                 <tbody>
                     <?php foreach ($dati as $riga): ?>
-                        <?
+                        <?php
                         $funzioni = "";
                         $elenco = $db->get_results("Select pc_funzioni.ordine, pc_tipifunzione.funzione   "
                                 . "from pc_funzioni inner join pc_tipifunzione on pc_funzioni.id_pc_tipifunzione=pc_tipifunzione.id   "

@@ -1,4 +1,4 @@
-<?
+<?php
 	 $id=(int)$_POST['idquery'];
 	 $DatiQuery=$db->get_row("select * from queryutente where id=$id");
 	 echo "<br><b class=query>DESCRIZIONE DELLA QUERY</b>";

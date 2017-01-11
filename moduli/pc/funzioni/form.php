@@ -1,4 +1,4 @@
-<?
+<?php
 unset($dati);
 $dati=$db->get_results("SELECT  * from pc_tipifunzione order by funzione");
 printf( "<h3>AGGIUNGI NUOVA FUNZIONE</h3>\n" );

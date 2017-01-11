@@ -1,4 +1,4 @@
-<?
+<?php
 
 $azione=$_GET['azione'];
 if (verificalivello(3))

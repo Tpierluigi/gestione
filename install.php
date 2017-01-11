@@ -5,7 +5,7 @@
 <title>installazione Dbase PC e stampanti</title>
 </head>
 <body>
-<?
+<?php
 include ("lib\ez_sql.php");
 include ("lib\generali.php");
  

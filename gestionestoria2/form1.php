@@ -1,4 +1,4 @@
-<?
+<?php
 echo "<div><b>NUOVO EVENTO</b></div>";
 echo "		DATA:<br>";
 $datacorr=getdate();$gg=$datacorr['mday'];$mm=$datacorr['mon'];$aa=$datacorr['year'];

@@ -1,4 +1,4 @@
-<?
+<?php
 if (verificalivello(3))
 	{
   @$azione=$_POST['azione'];

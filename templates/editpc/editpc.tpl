@@ -94,9 +94,9 @@
   			<input type="hidden" name="progressivoimpianto" value="$dati->progressivoimpianto">
 
         {if $posizione->sito != ""}
-				<strong>{$posizione->sito|escape:"htmlall"} : {$posizione->impianto|escape:"htmlall"}</strong> &nbsp;&nbsp;<img src="icons/prova.gif" onclick='finestraposizione()'/>
+				<strong>{$posizione->sito|escape:"htmlall"} : {$posizione->impianto|escape:"htmlall"}</strong> &nbsp;&nbsp;<img src="icone/prova.gif" onclick='finestraposizione()'/>
         {else}
-				<strong>DA DEFINIRE</strong> &nbsp;&nbsp;<img src="icons/prova.gif" onclick='finestraposizione()'/>
+				<strong>DA DEFINIRE</strong> &nbsp;&nbsp;<img src="icone/prova.gif" onclick='finestraposizione()'/>
         {/if}
 			</td>
 		</tr>

@@ -1,4 +1,4 @@
-<?
+<?php
 $dati=$db->get_results("
 SELECT  elencosw.software, elencosw.Licenza, elencosw.Versione, software.Descrizione, software.ID
 FROM elencosw INNER JOIN software ON elencosw.software = software.ID where elencosw.computer=$id

@@ -1,4 +1,4 @@
-<?
+<?php
 
 require_once("lib/clstree.php");
 require_once("lib/generali.php");

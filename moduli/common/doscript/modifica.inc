@@ -1,4 +1,4 @@
-<?
+<?php
 $id=(int)$_POST['idscript'];
 $Dati=$db->get_row("select * from AdminScript where id=$id");
 print( "<table summary=\"\" width='100%'>\n" );

@@ -1,4 +1,4 @@
-<?
+<?php
 class qb_join
   {
   var $tabella1;

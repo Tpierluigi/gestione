@@ -1,4 +1,4 @@
-<?
+<?php
 /* 
 *******************MODULO PER LA GESTIONE DELLA PROPRIA PASSWORD: CONSENTE DI **
 *******************CAMBIARE LA PASSWORD PERSONALE*******************************

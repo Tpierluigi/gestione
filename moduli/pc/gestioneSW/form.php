@@ -1,4 +1,4 @@
-<?
+<?php
 unset($dati);
 $dati=$db->get_results("SELECT  * from software order by parent,descrizione");
 printf( "<script language=\"JavaScript\" type=\"text/javascript\">\n" );

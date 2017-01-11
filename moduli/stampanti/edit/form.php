@@ -1,4 +1,4 @@
-<?
+<?php
 $codice=$_GET['codice'];
 $stampante=new oggetto("stampanti","stampanti/edit.tpl","codice");
 $stampante->oSmarty=new smartypc;

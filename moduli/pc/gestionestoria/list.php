@@ -1,4 +1,4 @@
-<?
+<?php
 $dati=$db->get_results("SELECT  ID,date_format(data,'%d/%m/%Y') as datac, evento  FROM cronologia WHERE apparecchio=$id ORDER BY data desc,id desc");
 
 if (sizeof($dati)>0)

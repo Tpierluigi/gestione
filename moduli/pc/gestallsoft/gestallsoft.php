@@ -1,4 +1,4 @@
-<?
+<?php
 if (verificalivello(2))
 		{
     $min=($_GET['pagina']-1)*8;

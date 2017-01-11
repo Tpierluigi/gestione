@@ -1,4 +1,4 @@
-<?
+<?php
 
 function EseguiAggCampi($sTabella,$sCampo,$uValore,$aFiltro,$sAzione)
 	{

@@ -1,4 +1,4 @@
-<?
+<?php
   echo "<hr><h3>Aggiungi nuovo utente</h3>";
   echo "<form action=\"index.php?modulo=gestioneutenti&azione=add\" method=\"post\"><table>"; 
   echo "    <tr><td align=\"right\">User Name</td>";

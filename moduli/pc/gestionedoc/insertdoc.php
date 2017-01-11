@@ -1,4 +1,4 @@
-<?
+<?php
 	//recupero ID dell'utente che sta eseguendo l'operazione, l'estensione del file passato e il MIME type
 	$codutente=$_SESSION["id"]; 
 	$estensione=substr($_FILES['Documento']['name'],strrpos($_FILES['Documento']['name'],'.'));

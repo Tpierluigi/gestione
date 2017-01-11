@@ -1,4 +1,4 @@
-<?
+<?php
 $NomeQuery=$_POST['fNomeQuery'];
 $TestoQuery=stripslashes($_POST['fTestoQuery']);
 $TestoQuery=str_replace("'","''",$TestoQuery);

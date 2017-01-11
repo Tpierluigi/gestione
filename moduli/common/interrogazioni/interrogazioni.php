@@ -1,4 +1,4 @@
-<?
+<?php
 if (verificalivello(3))
 	{
 
@@ -29,7 +29,7 @@ if (verificalivello(3))
   
   </script>
   
-  <?
+  <?php
   $menubar=new barramenu;
   
   switch($azione)

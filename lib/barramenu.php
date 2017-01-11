@@ -1,4 +1,4 @@
-<?
+<?php
 class barramenu{
 	var $m_sCaptionComandi;
 	var $m_sURLComandi;

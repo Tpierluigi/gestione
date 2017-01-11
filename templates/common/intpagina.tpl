@@ -62,7 +62,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="index.php?modulo=mainmenu">
-                                <img src="icons/logo.png">
+                                <img src="icone/logo.png">
                             </a>
                         </div>
                         <div class="collapse navbar-collapse">

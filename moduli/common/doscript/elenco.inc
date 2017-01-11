@@ -1,4 +1,4 @@
-<?
+<?php
 $script=$db->get_results("SELECT * FROM AdminScript");
 if  (sizeof($script) >0)
 		{

@@ -1,4 +1,4 @@
-<?
+<?php
 include ("check.php");
 include ("gestionestoria2.funzgenerali.php");
 verificalivello(0);

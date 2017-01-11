@@ -1,4 +1,4 @@
-<?
+<?php
 $id=(int)$_POST['idscript'];
 $NomeScript=$_POST['fNomeScript'];
 $TestoScript=stripslashes($_POST['fTestoScript']);

@@ -1,4 +1,4 @@
-<?
+<?php
     $head=new smartypc;
     $head->assign("SWver",$SWver);
     if (isset($_datiutente)) $head->assign("_datiutente",$_datiutente);

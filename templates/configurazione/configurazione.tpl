@@ -21,7 +21,7 @@ MACCHINA</span></big></td>
 
           <tr>
 
-            <td style="border-right: 1px solid gray; border-bottom: 1px solid black; font-family: Arial; color: rgb(204, 0, 0); font-weight: bold; height: 35px; width: 163px; background-color: rgb(255, 255, 255);"><small><img style="width: 174px; height: 22px;" alt="" src="icons/CONF.bmp"><br>
+            <td style="border-right: 1px solid gray; border-bottom: 1px solid black; font-family: Arial; color: rgb(204, 0, 0); font-weight: bold; height: 35px; width: 163px; background-color: rgb(255, 255, 255);"><small><img style="width: 174px; height: 22px;" alt="" src="icone/CONF.bmp"><br>
 
             </small></td>
 
@@ -31,7 +31,7 @@ MACCHINA</span></big></td>
 
           <tr>
 
-            <td style="border-right: 1px solid gray; color: rgb(204, 0, 0); font-family: Arial; font-weight: bold; height: 35px; width: 163px; background-color: rgb(255, 255, 255);"><small><img style="width: 90px; height: 22px;" alt="" src="icons/CAT.bmp"><br>
+            <td style="border-right: 1px solid gray; color: rgb(204, 0, 0); font-family: Arial; font-weight: bold; height: 35px; width: 163px; background-color: rgb(255, 255, 255);"><small><img style="width: 90px; height: 22px;" alt="" src="icone/CAT.bmp"><br>
 
             </small></td>
 
@@ -61,7 +61,7 @@ MACCHINA</span></big></td>
 
           <tr>
 
-            <td style="width: 95px;" colspan="1" rowspan="2"><img style="width: 121px; height: 31px;" alt="" src="icons/azioni.bmp"></td>
+            <td style="width: 95px;" colspan="1" rowspan="2"><img style="width: 121px; height: 31px;" alt="" src="icone/azioni.bmp"></td>
 
             <td style="width: 586px;" id ="nuova_voce"></td>
 

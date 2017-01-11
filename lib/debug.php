@@ -1,4 +1,4 @@
-<?
+<?php
 	$_ERRORI[2627]="Codice univoco duplicato: violazione della chiave primaria";
 	
 	
@@ -14,11 +14,11 @@
 		  <table width="558" height="116" border="1" cellpadding="0" cellspacing="0" bordercolor="#000000">
 			<tr>
 					<td height="38" bgcolor="#D6D7FC">
-							<font color="#000000">errore SQL: <b><?echo "$errore->codice : ".$_ERRORI[$errore->codice];?></b><font color="#FF3300">
+							<font color="#000000">errore SQL: <b><?phpecho "$errore->codice : ".$_ERRORI[$errore->codice];?></b><font color="#FF3300">
 			</tr>
 			<tr>
-			  <td height="38" bgcolor="#D6D7FC"><font color="#000000">function <font color="#FF3300"><?
-			  echo($debug_array[$tmp_counter]["function"]);?>(</font> <font color="#2020F0"><?
+			  <td height="38" bgcolor="#D6D7FC"><font color="#000000">function <font color="#FF3300"><?php
+			  echo($debug_array[$tmp_counter]["function"]);?>(</font> <font color="#2020F0"><?php
 			  //count how many args a there
 			  $args_counter = count($debug_array[$tmp_counter]["args"]);
 			  //print them
@@ -39,14 +39,14 @@
 			</tr>
 			<tr>
 			  <td bgcolor="#5F72FA"><font color="#FFFFFF">{</font><br>
-				<font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file: <?
+				<font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;file: <?php
 				echo($debug_array[$tmp_counter]["file"]);?></font><br>
-				<font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line: <?
+				<font color="#FFFFFF">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;line: <?php
 				echo($debug_array[$tmp_counter]["line"]);?></font><br>
 				<font color="#FFFFFF">}</font></td>
 			</tr>
 		  </table>
-		  <?
+		  <?php
 		 if(($tmp_counter + 1) != $counter)
 		 {
 		   echo("<br>chIamata da:<br>");
@@ -56,7 +56,7 @@
 	}
 
 ?>
-<?
+<?php
 function debug2()
 	{
 	$backtrc=debug_backtrace();

@@ -1,4 +1,4 @@
-<?
+<?php
 
 require_once("lib/ez_sql.php");
 require_once("lib/generali.php");
@@ -42,14 +42,15 @@ class smartypc extends Smarty {
 }
 
 session_start();
-$imgpath = "icons/doctypes/";
+$imgpath = "icone/doctypes/";
 $moduliPC = elencomoduli('moduli/pc');
 $modulicomuni = elencomoduli('moduli/common');
 $moduliStampanti = elencomoduli('moduli/stampanti');
 $moduliIP = elencomoduli('moduli/ipaddress');
-switch ($_GET['app']) {
+$app=  setWithDefault($_GET['app'], "");
+switch ($app) {
     case '':
-        $modulo = $modulicomuni[$_GET['modulo']];
+        $modulo = setWithdefault($modulicomuni[setWithDefault($_GET['modulo'],"")],"");
         break;
     case 'PC':
         $modulo = $moduliPC[$_GET['modulo']];
@@ -61,7 +62,7 @@ switch ($_GET['app']) {
         $modulo = $moduliIP[$_GET['modulo']];
         break;
 }
-if ($_SESSION['id'] != "")
+if (setWithDefault($_SESSION['id'],"") != "")
     $_codusr = $_SESSION['id'];
 if (isset($_SESSION['activepage']))
     $activepage = (int) $_SESSION['activepage'];
@@ -71,7 +72,7 @@ if (isset($_codusr))
     $_datiutente = @$db->get_row("select * from utenti where ID=$_codusr");
 
 ob_start();
-if (isset($modulo)) {
+if ($modulo!="") {
     include ($modulo['file']);
 } else {
     if (isset($_SESSION['id']) && $_SESSION['id'] != "")

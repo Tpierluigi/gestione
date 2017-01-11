@@ -7,7 +7,7 @@
 	<script type="text/javascript" src="lib/jquery/js/jquery-ui-1.7.2.custom.min.js"></script>
 	<script src="lib/jquery/js/jquery-tinymce.js" type="text/javascript"></script>
 	
-<?
+<?php
 echo "<div><b>NUOVO EVENTO</b></div>";
 echo "		DATA:<br>";
 $datacorr=getdate();$gg=$datacorr['mday'];$mm=$datacorr['mon'];$aa=$datacorr['year'];

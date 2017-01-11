@@ -1,7 +1,9 @@
-<?
-$usr=$_POST["username"];
-$pw=md5($_POST["username"].$_POST["password"]);
-$riga=$db->get_row("Select ID from utenti where username='$usr' and password='$pw'");
+<?php
+$usr= strtolower(setWithDefault($_POST["username"], ""));
+$pw=  setWithDefault($_POST["password"], "");
+$usrpw=md5($usr.$pw);
+$riga=$db->get_row("Select ID from utenti where username='$usr' and password='$usrpw'");
+$loginFallito=FALSE;
 if ($usr){
     if ($riga){
 	$val=(string)$riga->ID;

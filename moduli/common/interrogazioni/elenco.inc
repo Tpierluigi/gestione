@@ -1,4 +1,4 @@
-<?
+<?php
 $query=$db->get_results("SELECT * FROM queryutente where IDUtente=$codusr OR Pubblica=1");
 if  (sizeof($query) >0)
 		{

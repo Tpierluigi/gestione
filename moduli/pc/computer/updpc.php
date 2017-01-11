@@ -1,4 +1,4 @@
-<?
+<?php
   $fNote=str_replace("'","''",$fNote);
   $posizione=$db->escape($posizione);
   

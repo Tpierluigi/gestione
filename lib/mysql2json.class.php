@@ -1,4 +1,4 @@
-<?
+<?php
 /** 
 * Filename: mysql2json.class.php 
 * Purpose: Convert mysql resultset data into JSON(http://json.org) format

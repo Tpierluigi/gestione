@@ -1,4 +1,4 @@
-<?
+<?php
 	 $id=(int)$_POST['idquery'];
 	 $link= new DBLink($db);
 	 $link->SetTbl("queryutente");

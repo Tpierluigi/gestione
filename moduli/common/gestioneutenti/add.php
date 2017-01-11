@@ -1,4 +1,4 @@
-<?
+<?php
 //sezione dche contiene lo script di aggiunta di un utente al database 
 //controllo che la password sia digitata correttamente...
 if (($_POST['password'])==($_POST['checkpassword'])){

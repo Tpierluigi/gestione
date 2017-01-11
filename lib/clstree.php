@@ -1,4 +1,4 @@
-<?
+<?php
 require_once('domit/xml_domit_lite_include.php');
 
 class clsTree

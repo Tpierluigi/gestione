@@ -1,4 +1,4 @@
-<?
+<?php
 
 $id=(int)$_POST['fID'];
 $NomeQuery=$_POST['fNomeQuery'];

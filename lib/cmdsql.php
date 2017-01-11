@@ -1,4 +1,4 @@
-<?
+<?php
 include ("ez_sql.php");
 include ("generali.php");
 

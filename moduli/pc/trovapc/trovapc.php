@@ -1,4 +1,4 @@
- <?
+ <?php
 session_start();
 verificalivello(3);
 

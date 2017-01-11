@@ -1,4 +1,4 @@
-<?
+<?php
 $ris=mssql_query("SELECT  ID,convert(varchar,data,103) as datac, evento  FROM cronologia WHERE apparecchio=$id ORDER BY data desc");
 while ($riga=mssql_fetch_object($ris)) $dati[]=$riga;
 if (sizeof($dati)>0)

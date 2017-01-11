@@ -1,4 +1,4 @@
-<?
+<?php
 $id=(int)$_POST['idscript']; 
 $link= new DBLink ($db);
 $link->SetTbl("AdminScript");

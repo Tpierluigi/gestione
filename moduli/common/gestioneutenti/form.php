@@ -1,4 +1,4 @@
-<?
+<?php
 /*
 sezione che mostra la form di modifica di un utente del gestionale
 vengono estratti i dati utente e caricati sulla form

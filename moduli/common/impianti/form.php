@@ -1,4 +1,4 @@
-<?
+<?php
 unset($dati);
 $dati=$db->get_results("SELECT  * from paesi order by Descrizione");
 foreach ($dati as $dato)

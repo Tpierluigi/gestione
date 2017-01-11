@@ -1,4 +1,4 @@
-<?
+<?php
 function changeData($id_pc,$id_configurazione,$id_voce,$valore){
 	global $db;
 	$oResp=new xajaxResponse();
@@ -69,8 +69,8 @@ function handleNewConfig($confstep,$descConf,$id_pc){
 	switch ($confstep){
 		case 0 :
 			$html="
-			<img onClick=xajax_handleNewConfig(1,'',$id_pc) src=\"icons/newconf.png\">
-			<img onClick=xajax_handleNewConfig(3,'',$id_pc) src=\"icons/cancconf.png\">
+			<img onClick=xajax_handleNewConfig(1,'',$id_pc) src=\"icone/newconf.png\">
+			<img onClick=xajax_handleNewConfig(3,'',$id_pc) src=\"icone/cancconf.png\">
 			";
 			$oResp->addAssign("nuova_configurazione","innerHTML",$html);
 			return $oResp->getXML();
@@ -123,7 +123,7 @@ function handleNewFeature($featstep,$config_id=0,$id_pc,$feat_id=""){
 	switch ($featstep){
 		case 0 :
 			$html="
-			<img onClick=xajax_handleNewFeature(1,$config_id,$id_pc) src=\"icons/newFeat.png\">
+			<img onClick=xajax_handleNewFeature(1,$config_id,$id_pc) src=\"icone/newFeat.png\">
 			";
 			$oResp->addAssign("nuova_voce","innerHTML",$html);
 			return $oResp->getXML();

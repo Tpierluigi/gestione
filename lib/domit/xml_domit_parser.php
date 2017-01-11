@@ -3202,7 +3202,7 @@ class DOMIT_Parser {
 			$pre = strtoupper(substr($data, 0, 3));
 			
 			switch ($pre) {
-				case '<?X': //xml declaration
+				case '<?phpX': //xml declaration
 					$this->processingInstructionElement($parser, 'xml', substr($data, 6, (strlen($data) - 6 - 2)));
 					break;
 				case '<!E': //dtd entity

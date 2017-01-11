@@ -2,7 +2,7 @@
 
 <table width="100%" cellspacing="0" cellpadding="0" border=0>
 	<tr>
-		<td width=30><img src="icons/conflist.bmp" border="0"></td><td style="background-color: #f0ffff;"  id ="elenco_configurazioni"> </td>
+		<td width=30><img src="icone/conflist.bmp" border="0"></td><td style="background-color: #f0ffff;"  id ="elenco_configurazioni"> </td>
 		<td style="background-color: #f0ffff;"  id ="nuova_configurazione">
 			messaggi nuova configurazione
 		</td>  		

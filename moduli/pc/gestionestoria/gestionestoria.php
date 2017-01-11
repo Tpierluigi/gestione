@@ -1,5 +1,5 @@
 
-<?
+<?php
 if (verificalivello(3))
 	{
   

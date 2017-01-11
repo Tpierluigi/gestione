@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 
-<?
+<?php
 $ord=$_GET['ord'];
 if ($ord=="") $ord="stampanti.id";
 $testoqry="";

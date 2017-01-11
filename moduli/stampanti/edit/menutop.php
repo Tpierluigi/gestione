@@ -1,4 +1,4 @@
-<?
+<?php
 $menubar=new barramenu;
 if ($codice!="")
 	{

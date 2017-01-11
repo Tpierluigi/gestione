@@ -1,4 +1,4 @@
-<?
+<?php
 if (verificalivello(3))
 	{
   @$id=(int)$_GET['id'];

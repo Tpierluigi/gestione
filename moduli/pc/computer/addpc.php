@@ -1,4 +1,4 @@
-<?
+<?php
 
   if ($ID>0)
   $nuovoID=$ID;

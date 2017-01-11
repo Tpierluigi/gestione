@@ -1,4 +1,4 @@
-<?
+<?php
 if (verificalivello(3))
 	{
   //PARTE PER L'INSERIMENTO, LA MODIFICA E LA VISUALIZZAZIONE DEI COMMENTI

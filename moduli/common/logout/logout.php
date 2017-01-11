@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 $_SESSION['id']="";
 echo "<h2 align=\"center\"> logout effettuato correttamente</h2>";

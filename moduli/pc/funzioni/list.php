@@ -1,4 +1,4 @@
-<?
+<?php
 $query="
 SELECT  pc_funzioni.*, pc_tipifunzione.funzione 
 FROM pc_funzioni INNER JOIN pc_tipifunzione ON pc_tipifunzione.id = pc_funzioni.id_pc_tipifunzione

@@ -1,4 +1,4 @@
-<?
+<?php
 include_once ("ez_sql.php");
 include ("debug.php");
 class DBLink

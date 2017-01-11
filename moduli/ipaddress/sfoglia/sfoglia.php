@@ -1,4 +1,4 @@
-<?
+<?php
 verificalivello(3);
 define("NREC",12);
 if (isset ($_GET['page']))

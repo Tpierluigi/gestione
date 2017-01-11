@@ -1,4 +1,4 @@
-<?
+<?php
 print( "<table summary=\"\" width='100%'>\n" );
 print( "	<tr>\n" );
 print( "		<td valign='top' width='80%'>" );

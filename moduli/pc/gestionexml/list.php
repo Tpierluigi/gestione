@@ -1,4 +1,4 @@
-<?
+<?php
 
 $dati=$db->get_results("SELECT *,date_format(data,'%d/%m/%Y') as data from monitorxml WHERE PC=$id ");
 echo "<table class=\"software\">";
