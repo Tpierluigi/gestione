@@ -1,6 +1,8 @@
 <?php
 
 require_once("lib/ez_sql.php");
+require_once("lib/database.class.php");
+
 require_once("lib/generali.php");
 
 require_once("lib/check.php");
@@ -22,7 +24,7 @@ $URLuploaddir = $settaggi['generale']['UrlUpload'];
 $db = new DB(
         $settaggi['database']['Utente'], $settaggi['database']['Password'], $settaggi['database']['Database'], $settaggi['database']['Server']
 );
-
+$nDb= new Database($settaggi['database']['Utente'], $settaggi['database']['Password'], $settaggi['database']['Database'], $settaggi['database']['Server'], $settaggi['database']['Port']);
 class smartypc extends Smarty {
 
     function smartypc() {

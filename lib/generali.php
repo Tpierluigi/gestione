@@ -349,5 +349,13 @@ function setWithDefault(&$from, $default){
         return $default;
     }
 }
+function getPropertyValue($obj,$prop,$def=""){
+    if (isset($obj) && is_object($obj) ){
+        if (isset($obj->$prop)){
+            return $obj->$prop;
+        }
+    }
+    return $def;
+}
 
 ?>
