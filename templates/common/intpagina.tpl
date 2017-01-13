@@ -51,11 +51,11 @@
     <BODY>
         {if $_codusr > 0}
             <div class="container">
-                <nav class="navbar  navbar-fixed-top">
+                <nav class="navbar  navbar-fixed-top navBlu">
                     <div class="container">
                         <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
                                 <span class="sr-only">Toggle navigation</span>
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
@@ -65,12 +65,12 @@
                                 <img src="icone/logo.png">
                             </a>
                         </div>
-                        <div class="collapse navbar-collapse">
-                            <ul class="nav navbar-nav">
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <ul class="nav navbar-nav ">
 
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE PC</A>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" role="menu">
                                         <li><a href="index.php?modulo=sfogliapc&app=PC">Gestione PC</a></li>
                                         <li><a href="index.php?modulo=gestionetipisw&app=PC">Gestione software</a></li>
                                         <li><a href="index.php?modulo=tipifunzione&app=PC">Gestione funzioni</a></li>
@@ -81,7 +81,7 @@
                                 </LI>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE POSIZIONI </A>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" role="menu">
                                         <li><a href="index.php?modulo=impianti">Gestione impianti</a></li>
                                         <li><a href="index.php?modulo=sedi">Gestione sedi</a></li>
                                         <li><a href="index.php?modulo=paesi">Elenco nazioni</a></li>
@@ -89,7 +89,7 @@
                                 </LI>
                                 <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">GESTIONE UTENTI</A>
-                                    <ul class="dropdown-menu">
+                                    <ul class="dropdown-menu" role="menu">
                                         <li><a href="index.php?modulo=gestioneutenti">Gestione utenti</a></li>
                                         <li><a href="index.php?modulo=cambiopwd">Cambio password</a></li>
                                         <li><a href="index.php?modulo=logout">Logout</a></li>

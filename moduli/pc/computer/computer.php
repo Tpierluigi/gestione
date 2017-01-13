@@ -119,35 +119,35 @@ if (verificalivello(2)):
     ?>
 
 
-    <?php if ($fNuovaURL != ""): ?>
+    <?php if (isset($fNuovaURL)): ?>
         <script language="JavaScript" type="text/javascript">
-                    document.location.href = '<?php= $fNuovaURL ?>';</script>
+                    document.location.href = '<?= $fNuovaURL ?>';</script>
     <?php endif; ?>
 
 
     <div class="container">
-        <form action="index.php?modulo=computer&app=PC&id=<?php= $dati->ID ?>" >
+        <form action="index.php?modulo=computer&app=PC&id=<?= $dati->ID ?>" >
 
             <div class="row">
                 <div class="col-xs-1 contextMenu">
                     <div class="row">
-                        <button class="btn btn-primary btn-lg glyphicon glyphicon-calendar" onmousedown ="aggiorna('index.php?modulo=gestionestoria&app=PC&id=<?php= $dati->ID ?>')"
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-calendar" onmousedown ="aggiorna('index.php?modulo=gestionestoria&app=PC&id=<?= $dati->ID ?>')"
                                 data-toggle="tooltip" data-placement="bottom" title="Cronologia" ></button>
                     </div>
                     <div class="row">
-                        <button class="btn btn-primary btn-lg glyphicon glyphicon-cog" onmousedown="aggiorna('index.php?modulo=dativari&app=PC&id=<?php= $dati->ID ?>')"
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-cog" onmousedown="aggiorna('index.php?modulo=dativari&app=PC&id=<?= $dati->ID ?>')"
                                 data-toggle="tooltip" data-placement="bottom" title="Dati ulteriori"></button>
                     </div>
                     <div class="row">
-                        <button class="btn btn-primary btn-lg glyphicon glyphicon-file" onmousedown="aggiorna('index.php?modulo=gestionedoc&app=PC&id=<?php= $dati->ID ?>')"
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-file" onmousedown="aggiorna('index.php?modulo=gestionedoc&app=PC&id=<?= $dati->ID ?>')"
                                 data-toggle="tooltip" data-placement="bottom" title="Documentazione"></button>
                     </div>
                     <div class="row">
-                        <button class="btn btn-primary btn-lg glyphicon glyphicon-cd"  onmousedown="aggiorna('index.php?modulo=gestioneSW&app=PC&id=<?php= $dati->ID ?>')"
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-cd"  onmousedown="aggiorna('index.php?modulo=gestioneSW&app=PC&id=<?= $dati->ID ?>')"
                                 data-toggle="tooltip" data-placement="bottom" title="Software installato"></button>
                     </div>
                     <div class="row">
-                        <button class="btn btn-primary btn-lg glyphicon glyphicon-wrench"  onmousedown="aggiorna('index.php?modulo=funzioni&app=PC&id=<?php= $dati->ID ?>')"
+                        <button class="btn btn-primary btn-lg glyphicon glyphicon-wrench"  onmousedown="aggiorna('index.php?modulo=funzioni&app=PC&id=<?= $dati->ID ?>')"
                                 data-toggle="tooltip" data-placement="bottom" title="Funzionalita'"></button>
                     </div>
                     <div class="row">
@@ -179,12 +179,12 @@ if (verificalivello(2)):
                                             <input id="id" class="form-control" name="ID"  
                                                    placeholder="id" 
                                                    type="text" 
-                                                   value="<?php= $dati->ID; ?>">
+                                                   value="<?= $dati->ID; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
                                         <div class="form-group">
-                                            Funzione: <?php= $elencoFunzioni; ?>
+                                            Funzione: <?= $elencoFunzioni; ?>
                                         </div>
 
                                     </div>
@@ -193,7 +193,7 @@ if (verificalivello(2)):
                                     <div class="col-xs-3">
                                         <div class="form-group">
                                             <label class="control-label">Data di registrazione:</label> 
-                                            <input readonly="" class="form-control" value="<?php= ReverseDate($dati->Datainst); ?>">
+                                            <input readonly="" class="form-control" value="<?= ReverseDate($dati->Datainst); ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
@@ -201,16 +201,16 @@ if (verificalivello(2)):
                                             <label class="control-label">Posizionamento Attuale:</label>
 
                                             <div class="input-group">
-                                                <input class="form-control" readonly value="<?php= $sitoDescrizione; ?>">
+                                                <input class="form-control" readonly value="<?= $sitoDescrizione; ?>">
                                                 <span class="input-group-addon glyphicon glyphicon-folder-open" id="apriPosizioni">
                                             </div>
                                             <?php if ($dati->progressivoimpianto == -1): ?>
                                                 <label class="control-label">Descrizione della pos. generica: </label>
-                                                <input type = "text" size = 40 class="form-control" name = "posizione" value = "<?php= $dati->posizione; ?>"></td>
+                                                <input type = "text" size = 40 class="form-control" name = "posizione" value = "<?= $dati->posizione; ?>"></td>
                                             <?php endif; ?>
 
-                                            <input type="hidden" name="id_aziende" value="<?php= $dati->id_aziende ?>">
-                                            <input type="hidden" name="progressivoimpianto" value="<?php= $dati->progressivoimpianto; ?>">
+                                            <input type="hidden" name="id_aziende" value="<?= $dati->id_aziende ?>">
+                                            <input type="hidden" name="progressivoimpianto" value="<?= $dati->progressivoimpianto; ?>">
 
                                         </div>
 
@@ -231,8 +231,8 @@ if (verificalivello(2)):
                                                         $sel = "";
                                                     }
                                                     ?>
-                                                    <option value="<?php= $riga->ID; ?>" <?php= $sel; ?> > 
-                                                        <?php= $riga->descrizione; ?>
+                                                    <option value="<?= $riga->ID; ?>" <?= $sel; ?> > 
+                                                        <?= $riga->descrizione; ?>
                                                     </option>
 
                                                 <?php endforeach; ?>
@@ -242,7 +242,7 @@ if (verificalivello(2)):
                                     <div class="col-xs-5">
                                         <div class="form-group">
                                             <label class="control-label">Commessa </label>
-                                            <input type = "text" class="form-control" name = "commessa" value = "<?php= $dati->commessa; ?>">
+                                            <input type = "text" class="form-control" name = "commessa" value = "<?= $dati->commessa; ?>">
                                         </div>
 
                                     </div>
@@ -251,13 +251,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-3">
                                         <div class="form-group">
                                             <label class="control-label"> Marca PC </label>
-                                            <input type="text" class="form-control" name="marca" value="<?php= $dati->marca; ?>">
+                                            <input type="text" class="form-control" name="marca" value="<?= $dati->marca; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
                                         <div class="form-group">
                                             <label class="control-label">Numero di serie</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "SN" value = "<?php= $dati->SN; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "SN" value = "<?= $dati->SN; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@ if (verificalivello(2)):
                                     <div class="col-xs-3">
                                         <div class="form-group">
                                             <label class="control-label">Modello PC</label>
-                                            <input type = "text" class="form-control"  name = "modello" value = "<?php= $dati->modello; ?>">
+                                            <input type = "text" class="form-control"  name = "modello" value = "<?= $dati->modello; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-5">
@@ -282,13 +282,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Monitor: pollici</label>
-                                            <input type="text" class="form-control" name="pollici" value="<?php= $dati->pollici; ?>">
+                                            <input type="text" class="form-control" name="pollici" value="<?= $dati->pollici; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Monitor: tipo</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "marca" value = "<?php= $dati->marca; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "marca" value = "<?= $dati->marca; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -296,13 +296,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label"> Marca e tipo motherboard</label>
-                                            <input type="text" class="form-control" name="madre" value="<?php= $dati->madre; ?>">
+                                            <input type="text" class="form-control" name="madre" value="<?= $dati->madre; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">CPU</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "CPU" value = "<?php= $dati->CPU; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "CPU" value = "<?= $dati->CPU; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -310,13 +310,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">RAM</label>
-                                            <input type="text" class="form-control" name="RAM" value="<?php= $dati->RAM; ?>">
+                                            <input type="text" class="form-control" name="RAM" value="<?= $dati->RAM; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Hard disk</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "HD" value = "<?php= $dati->HD; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "HD" value = "<?= $dati->HD; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -324,13 +324,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Unita' ottica</label>
-                                            <input type="text" class="form-control" name="lettore1" value="<?php= $dati->lettore1; ?>">
+                                            <input type="text" class="form-control" name="lettore1" value="<?= $dati->lettore1; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Seconda unità alternativa</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "lettore2" value = "<?php= $dati->lettore2; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "lettore2" value = "<?= $dati->lettore2; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -338,13 +338,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Scheda video</label>
-                                            <input type="text" class="form-control" name="skvideo" value="<?php= $dati->skvideo; ?>">
+                                            <input type="text" class="form-control" name="skvideo" value="<?= $dati->skvideo; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Sezione audio</label> 
-                                            <input class="form-control" type = "text"  size = "30" name = "audio" value = "<?php= $dati->audio; ?>">
+                                            <input class="form-control" type = "text"  size = "30" name = "audio" value = "<?= $dati->audio; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -355,13 +355,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 1: tipo</label>
-                                            <input type="text" name="skrete1" value="<?php= $dati->skrete1; ?>">
+                                            <input type="text" name="skrete1" value="<?= $dati->skrete1; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 2: tipo</label>
-                                            <input type="text" name="skrete1" value="<?php= $dati->skrete2; ?>">
+                                            <input type="text" name="skrete1" value="<?= $dati->skrete2; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -369,13 +369,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 1: IP address</label>
-                                            <input type="text" size=15 maxlenght="15" name="IP" value="<?php= NormalizeIP($dati->IPAddress) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="IP" value="<?= NormalizeIP($dati->IPAddress) ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 2: IP address</label>
-                                            <input type="text" size=15 maxlenght="15" name="IP" value="<?php= NormalizeIP($dati->IPAddress2) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="IP" value="<?= NormalizeIP($dati->IPAddress2) ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -383,13 +383,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 1: Netmask</label>
-                                            <input type="text" size=15 maxlenght="15" name="NM" value="<?php= NormalizeIP($dati->Netmask) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="NM" value="<?= NormalizeIP($dati->Netmask) ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 2: Netmask</label>
-                                            <input type="text" size=15 maxlenght="15" name="NM" value="<?php= NormalizeIP($dati->Netmask2) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="NM" value="<?= NormalizeIP($dati->Netmask2) ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -397,13 +397,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 1: Gateway</label>
-                                            <input type="text" size=15 maxlenght="15" name="GW1" value="<?php= NormalizeIP($dati->Gateway) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="GW1" value="<?= NormalizeIP($dati->Gateway) ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Rete 2: Gateway</label>
-                                            <input type="text" size=15 maxlenght="15" name="GW1" value="<?php= NormalizeIP($dati->Gateway2) ?>">
+                                            <input type="text" size=15 maxlenght="15" name="GW1" value="<?= NormalizeIP($dati->Gateway2) ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -411,13 +411,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Password amministrativa</label>
-                                            <input type="text" size=12 name="passwordAdmin" value="<?php= $dati->AdminPWD; ?>">
+                                            <input type="text" size=12 name="passwordAdmin" value="<?= $dati->AdminPWD; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Password VNC</label> 
-                                            <input type="text" size=8 maxlenght=8 name="passwordVNC" value="<?php= $dati->VNCPWD; ?>">
+                                            <input type="text" size=8 maxlenght=8 name="passwordVNC" value="<?= $dati->VNCPWD; ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -425,13 +425,13 @@ if (verificalivello(2)):
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Nome utente default</label>
-                                            <input type="text" size=15 maxlenght="15" name="nomeutente" value="<?php= $dati->UserName; ?>">
+                                            <input type="text" size=15 maxlenght="15" name="nomeutente" value="<?= $dati->UserName; ?>">
                                         </div>
                                     </div>
                                     <div class="col-xs-4">
                                         <div class="form-group">
                                             <label class="control-label">Password utente default</label> 
-                                            <input type="text" size=15 maxlenght="15" name="pwutente" value="<?php= $dati->UserPWD; ?>">
+                                            <input type="text" size=15 maxlenght="15" name="pwutente" value="<?= $dati->UserPWD; ?>">
                                         </div>
                                     </div>
 
@@ -442,9 +442,9 @@ if (verificalivello(2)):
                                             <label class="control-label">Gruppo di lavoro o dominio</label> 
                                             <select name="GroupType">
 
-                                                <option value="" <?php= $sel; ?>>ALTRO/N.A.</option>
-                                                <option value="W" <?php= $selW; ?>>WORKGROUP</option>
-                                                <option value="D" <?php= $selD; ?>>DOMINIO</option>
+                                                <option value="" <?= $sel; ?>>ALTRO/N.A.</option>
+                                                <option value="W" <?= $selW; ?>>WORKGROUP</option>
+                                                <option value="D" <?= $selD; ?>>DOMINIO</option>
                                             </select>
                                         </div>
                                     </div>
@@ -452,29 +452,29 @@ if (verificalivello(2)):
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <label class="control-label">Nome gruppo o dominio</label> 
-                                        <input type="text" size=20 maxlenght="20" name="GroupName" value="<?php= $dati->NomeGruppo; ?>">
+                                        <input type="text" size=20 maxlenght="20" name="GroupName" value="<?= $dati->NomeGruppo; ?>">
 
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-xs-4">
                                         <label class="control-label">Identificativo PC</label> 
-                                        <input type="text" size=20 maxlenght=32 value="<?php= $dati->IDrete; ?>"name="NetID">
+                                        <input type="text" size=20 maxlenght=32 value="<?= $dati->IDrete; ?>"name="NetID">
                                     </div>
                                 </div>
 
                             </div>
                             <div role="tabpanel" class="tab-pane" id="software">
-                                <?php= $elencoSwHtml ?>
+                                <?= $elencoSwHtml ?>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="note">
-                                <textarea name="fNote" rows=3 cols=100><?php= $dati->Note ?></textarea>
+                                <textarea name="fNote" rows=3 cols=100><?= $dati->Note ?></textarea>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <input type="text" name="azione" value="<?php= $val ?>">	 
+            <input type="text" name="azione" value="<?= setWithDefault($val, "") ?>">	 
             <input type="text" name="fNuovaURL">
 
         </form>
@@ -486,19 +486,21 @@ if (verificalivello(2)):
         <?php $root->dtree(true, $cont); ?>
     </div>
     <?php
-    switch ($successo) {
-        case 1:
-            allarme("NOTA: Dati aggiunti correttamente");
-            break;
-        case 2:
-            allarme("NOTA: Dati aggiornati correttamente");
-            break;
-        case 3:
-            allarme("ERRORE:PROBLEMI NELL'INSERIMENTO DATI !");
-            break;
-        case 4:
-            allarme("ERRORE:IL TIPO COMPUTER E' OBBLIGATORIO !");
-            break;
+    if (isset($successo)){
+        switch ($successo) {
+            case 1:
+                allarme("NOTA: Dati aggiunti correttamente");
+                break;
+            case 2:
+                allarme("NOTA: Dati aggiornati correttamente");
+                break;
+            case 3:
+                allarme("ERRORE:PROBLEMI NELL'INSERIMENTO DATI !");
+                break;
+            case 4:
+                allarme("ERRORE:IL TIPO COMPUTER E' OBBLIGATORIO !");
+                break;
+        }
     }
     ?>
 
@@ -538,13 +540,13 @@ if (verificalivello(2)):
             $("#finestrina").dialog("open").dialog("moveToTop");
         });
         /*
-         $(":input[name=IP]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->IPAddress); ?>');
-         $(":input[name=IP2]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->IPAddress2); ?>');
-         $(":input[name=NM]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->Netmask); ?>');
-         $(":input[name=NM2]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->Netmask2); ?>');
-         $(":input[name=GW1]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->Gateway); ?>');
-         $(":input[name=GW2]").mask("999.999.999.999").val('<?php= NormalizeIP($dati->Gateway2); ?>');
-         $(":input[name=COA]").mask("99999-999-999-999").val('<?php= $dati->COA; ?>');
+         $(":input[name=IP]").mask("999.999.999.999").val('<?= NormalizeIP($dati->IPAddress); ?>');
+         $(":input[name=IP2]").mask("999.999.999.999").val('<?= NormalizeIP($dati->IPAddress2); ?>');
+         $(":input[name=NM]").mask("999.999.999.999").val('<?= NormalizeIP($dati->Netmask); ?>');
+         $(":input[name=NM2]").mask("999.999.999.999").val('<?= NormalizeIP($dati->Netmask2); ?>');
+         $(":input[name=GW1]").mask("999.999.999.999").val('<?= NormalizeIP($dati->Gateway); ?>');
+         $(":input[name=GW2]").mask("999.999.999.999").val('<?= NormalizeIP($dati->Gateway2); ?>');
+         $(":input[name=COA]").mask("99999-999-999-999").val('<?= $dati->COA; ?>');
          */
 
 
