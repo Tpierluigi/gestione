@@ -136,7 +136,7 @@ if (verificalivello(2)):
 
 
     <div class="container">
-        <form method="post" action="index.php?modulo=computer&app=PC&id=<?= $idApparecchio ?>" >
+        <form method="post" name="frmComputer" action="index.php?modulo=computer&app=PC&id=<?= $idApparecchio ?>" >
 
             <div class="row">
                 <div class="col-xs-1 contextMenu">
@@ -158,7 +158,7 @@ if (verificalivello(2)):
                     </div>
                     <div class="row">
                         <button class="btn btn-primary btn-lg glyphicon glyphicon-wrench"  onmousedown="aggiorna('index.php?modulo=funzioni&app=PC&id=<?= $idApparecchio ?>')"
-                                data-toggle="tooltip" data-placement="bottom" title="Funzionalita'"></button>
+                                 data-placement="bottom" title="Funzionalita'"></button>
                     </div>
                     <div class="row">
                         <button class="btn btn-primary btn-lg glyphicon glyphicon-th-list"  onmousedown="aggiorna('index.php?modulo=sfogliapc&app=PC')"
