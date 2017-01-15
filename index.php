@@ -2,9 +2,7 @@
 
 require_once("lib/ez_sql.php");
 require_once("lib/database.class.php");
-
 require_once("lib/generali.php");
-
 require_once("lib/check.php");
 require_once("lib/barramenu.php");
 require_once("lib/clsDBlink.php");
@@ -12,6 +10,12 @@ require_once("lib/clstree.php");
 require_once('lib/smarty/libs/Smarty.class.php');
 require_once('lib/JSON.php');
 
+/*
+ * MODELLO APP
+ */
+
+require_once ("model/Computer.class.php");
+require_once ("model/Posizione.class.php");
 
 /* * ***CONFIG**** */
 $settaggi = parse_ini_file("config.ini", true);
@@ -21,6 +25,7 @@ $settaggi = parse_ini_file("config.ini", true);
 $SWver = $settaggi['generale']['Versione'];
 $uploaddir = $settaggi['generale']['directoryUpload'];
 $URLuploaddir = $settaggi['generale']['UrlUpload'];
+$viewDir=$settaggi['generale']['viewDir'];
 $db = new DB(
         $settaggi['database']['Utente'], $settaggi['database']['Password'], $settaggi['database']['Database'], $settaggi['database']['Server']
 );
