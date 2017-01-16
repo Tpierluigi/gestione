@@ -35,6 +35,9 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="lib/js/bootstrap.min.js"></script>
 
+        <!-- X-editable -->
+        <link href="lib/x-editable/bootstrap3-editable/css/bootstrap-editable.css" rel="stylesheet">
+        <script src="lib/x-editable/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
         {literal}
             <script type="text/javascript" language="javascript">
                 function eseguiAzione(val, nomeform)

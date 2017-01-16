@@ -64,5 +64,11 @@ class Computer {
         $dati = $db->get_results($testoqry);
         return $dati;
     }
+    public function getOtherData($id){
+        $dati=$this->db->get_results(
+                "SELECT  pc_campi.id,pc_campi.descrizione,pc_varie.pc,pc_varie.voce,pc_varie.valore "
+                . "FROM pc_campi left join pc_varie on pc_campi.id=pc_varie.voce and pc_varie.pc=$id ");
+        return $dati;
+    }
 
 }
