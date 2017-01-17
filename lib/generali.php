@@ -78,6 +78,23 @@ function elencomoduli($dir) {
     }
     return false;
 }
+function elencoController($dir) {
+    $controllers=array();
+    $handle = opendir($dir);
+    if ($handle) {
+        while (false !== ($file = readdir($handle))) {
+            if ($file != "." && $file != ".." && $file != ".svn" ) {
+                if(!is_dir($dir . '/' . $file)){
+                    $controllers[$file]= $dir . '/' . $file;
+                }
+            }
+        }
+        closedir($handle);
+        return $controllers;
+    }
+    return false;
+}
+
 
 function stampatitolo($testo) {
     print( "<div class=\"submenu\">$testo</div>\n");
