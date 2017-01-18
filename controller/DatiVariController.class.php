@@ -1,4 +1,5 @@
 <?php
+require_once '../lib/generali.php';
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -11,11 +12,7 @@
  *
  * @author pier
  */
-class DatiVariController {
-    protected $db;
-    public function __construct(Database $db) {
-        $this->db=$db;
-    }
+class DatiVariController extends BaseController{
     public function update(){
         $idApparecchio=(int)($_GET['idApparecchio']);
         $idVoce=(int)($_GET['idVoce']);

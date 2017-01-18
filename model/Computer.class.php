@@ -70,5 +70,9 @@ class Computer {
                 . "FROM pc_campi left join pc_varie on pc_campi.id=pc_varie.voce and pc_varie.pc=$id ");
         return $dati;
     }
+    public function getDocs($id){
+        $dati=$this->db->get_results("SELECT  ID,PC,Documento,Commento,Tipo FROM documenti WHERE PC=$id ");
+        return $dati;
+    }
 
 }

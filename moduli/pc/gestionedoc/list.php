@@ -3,6 +3,7 @@
 $_DIMX=200;
 
 $dati=$db->get_results("SELECT  ID,PC,Documento,Commento,Tipo FROM documenti WHERE PC=$id ");
+
 echo "<table class=\"software\">";
 echo "<tr><th></th><th>CLICCARE SULL'IMMAGINE PER INGRANDIRE</th></tr>";
 if (!isset($dati)) 
