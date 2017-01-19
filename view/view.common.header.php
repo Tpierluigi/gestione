@@ -47,7 +47,7 @@
             </script>
     </HEAD>
     <BODY>
-        <?php if ($_codusr > 0):?>
+        <?php if ($registry->get('idUtente') > 0):?>
             <div class="container">
                 <nav class="navbar  navbar-fixed-top navBlu">
                     <div class="container">

@@ -78,14 +78,15 @@ function elencomoduli($dir) {
     }
     return false;
 }
+
 function elencoController($dir) {
-    $controllers=array();
+    $controllers = array();
     $handle = opendir($dir);
     if ($handle) {
         while (false !== ($file = readdir($handle))) {
-            if ($file != "." && $file != ".." && $file != ".svn" ) {
-                if(!is_dir($dir . '/' . $file)){
-                    $controllers[$file]= $dir . '/' . $file;
+            if ($file != "." && $file != ".." && $file != ".svn") {
+                if (!is_dir($dir . '/' . $file)) {
+                    $controllers[$file] = $dir . '/' . $file;
                 }
             }
         }
@@ -94,7 +95,6 @@ function elencoController($dir) {
     }
     return false;
 }
-
 
 function stampatitolo($testo) {
     print( "<div class=\"submenu\">$testo</div>\n");
@@ -378,4 +378,13 @@ function NormalizeIP($ip) {
         return "";
     }
 }
+
+function getGlobalVarValue(&$variable, $index, $defaultVal = "") {
+    if (isset($variable[$index])) {
+        return $variable[$index];
+    } else {
+        return $defaultVal;
+    }
+}
+
 ?>

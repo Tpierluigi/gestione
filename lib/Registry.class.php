@@ -7,13 +7,11 @@
  */
 
 /**
- * Description of BaseController
+ * classe statica per passare delle variabili globali senza fare dichiarazioni sul
+ * corpo delle procedure 
  *
  * @author pier
  */
-class BaseController {
-    protected $db;
-    public function __construct(Database $db) {
-        $this->db=$db;
-    }
+class Registry {
+    public static $data;
 }

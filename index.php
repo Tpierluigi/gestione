@@ -9,6 +9,7 @@ require_once("lib/clsDBlink.php");
 require_once("lib/clstree.php");
 require_once('lib/smarty/libs/Smarty.class.php');
 require_once('lib/JSON.php');
+require_once('lib/registry.class.php');
 
 /*
  * MODELLO APP
@@ -20,8 +21,8 @@ require_once ("model/Posizione.class.php");
 /*
  * controllers
  */
-$elencoController= elencoController('controller');
-foreach ($elencoController as $nome){
+$elencoController = elencoController('controller');
+foreach ($elencoController as $nome) {
     include ($nome);
 }
 /* * ***CONFIG**** */
@@ -55,7 +56,7 @@ class smartypc extends Smarty {
     }
 
 }
-
+$registry=new Registry();
 session_start();
 $imgpath = "icone/doctypes/";
 $moduliPC = elencomoduli('moduli/pc');
@@ -63,15 +64,21 @@ $modulicomuni = elencomoduli('moduli/common');
 $moduliStampanti = elencomoduli('moduli/stampanti');
 $moduliIP = elencomoduli('moduli/ipaddress');
 $app = setWithDefault($_GET['app'], "");
-if (isset($_GET['modulo']))
-    $nomeModulo = $_GET['modulo'];
-if (isset($_GET['c']))
-    $nomeController = $_GET['c'];
-if (isset($_GET['f']))
-    $nomeFunzione = $_GET['f'];
+$nomeModulo = getGlobalVarValue($_GET, 'modulo');
+$nomeController = getGlobalVarValue($_GET, 'c');
+$nomeFunzione = getGlobalVarValue($_GET, 'f');
+$_codusr = getGlobalVarValue($_SESSION, 'id');
+$activepage = (int) getGlobalVarValue($_SESSION, 'activepage', 0);
+$activeorder = (int) getGlobalVarValue($_SESSION, 'activeorder', 0);
+if (isset($_codusr)) {
+    $_datiutente = $db->get_row("select * from utenti where ID=$_codusr");
+}
+Registry::data-[idUtente]=$_codusr;
+Registry::data->datiUtente=$_datiutente;
+
 switch ($app) {
     case '':
-        $modulo = setWithdefault($modulicomuni[setWithDefault($nomeModulo, "")], "");
+        $modulo = $modulicomuni[$nomeModulo];
         break;
     case 'PC':
         $modulo = $moduliPC[$nomeModulo];
@@ -83,19 +90,10 @@ switch ($app) {
         $modulo = $moduliIP[$nomeModulo];
         break;
 }
-if (setWithDefault($_SESSION['id'], "") != "")
-    $_codusr = $_SESSION['id'];
-if (isset($_SESSION['activepage']))
-    $activepage = (int) $_SESSION['activepage'];
-if (isset($_SESSION['activeorder']))
-    $activeorder = (int) $_SESSION['activeorder'];
-if (isset($_codusr))
-    $_datiutente = @$db->get_row("select * from utenti where ID=$_codusr");
-
 if (isset($nomeController)) {
     $nomeController .= 'Controller';
     $controller = new $nomeController($nDb);
-    if (isset($nomeFunzione)) {
+    if ($nomeFunzione!="") {
         $controller->$nomeFunzione();
     }
 } else {
@@ -103,10 +101,11 @@ if (isset($nomeController)) {
     if ($modulo != "") {
         include ($modulo['file']);
     } else {
-        if (isset($_SESSION['id']) && $_SESSION['id'] != "")
+        if (isset($_SESSION['id']) && $_SESSION['id'] != "") {
             include ($modulicomuni['mainmenu']['file']);
-        else
+        } else {
             include ($modulicomuni['login']['file']);
+        }
     }
     $contenuto = ob_get_contents();
     ob_end_clean();
